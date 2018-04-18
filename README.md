@@ -136,7 +136,7 @@ daily分支发布 [powerd by [alimama-deploy](http://gitlab.alibaba-inc.com/thx/
 
       //RAP相关配置
       "rapVersion": "2", //指定使用rap1/rap2
-      "matProjectId": "878", //项目rap的projectId
+      "rapProjectId": "878", //项目rap的projectId
       "disableRap": true, //禁掉命令里rap相关的功能
       "modelsPath": "src/app/services/models.js", //mx models生成的本地models.js的文件路径
       "modelsTmpl": "./magix-cli-models-tmpl/models.js", //mx models生成的models.js的文件模板
