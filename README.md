@@ -54,7 +54,7 @@
   6. [cell-lego-scaffold](http://gitlab.alibaba-inc.com/cell/cell-lego-scaffold)
 
 
-## 所有命令列表：(mx -h)
+## 所有命令列表 mx -h
 
 #### # `mx init`
 
@@ -122,7 +122,8 @@ daily分支发布 [powerd by [alimama-deploy](http://gitlab.alibaba-inc.com/thx/
 
 ----------
 
-## 工具相关所有配置 magixCliConfig (在package.json中)
+## 所有配置 magixCliConfig 
+所有配置在package.json的magixCliConfig中
 
     "magixCliConfig": {
 
