@@ -96,7 +96,7 @@ magix3 组件相关命令，同步组件到本地项目中，支持配置多组�
 
 #### # `mx chartpark`
 
-同步chartpark平台的图表配置信息到项目中
+在[chartpark](https://chartpark.alibaba-inc.com)平台操作并打包完后，执行 `mx chartpark` 将 chartpark 平台打包生成的完整图表文件及配置同步到本地项目中，免去了项目中时时修改版本号的麻烦
 
 
 #### # `mx daily`
@@ -153,8 +153,8 @@ daily分支发布 [powerd by [alimama-deploy](http://gitlab.alibaba-inc.com/thx/
 
       //chartPark相关配置
       "chartParkId": "1234",
-      "chartParkOptionsPath": "src/app/chartParkOptions.js", //生成本地chartPark图表配置的文件路径
-      "chartParkOptionsTmpl": "./magix-cli-models-tmpl/chartParkOptionTmpl.js", //生成本地chartPark图表配置的模板文件
+      "chartParkIndexPath": "src/app/chartpark/index.js", //生成本地chartPark完整主文件(包含图表配置)的路径
+      "chartParkIndexTmpl": "./magix-cli-models-tmpl/chartParkIndexTmpl.js", //生成本地chartPark完整主文件的模板文件
 
       //mx generate相关配置
       "codeTmpl": "./magix-cli-tmpl", //mx generate 生成view代码片段的本地模板
