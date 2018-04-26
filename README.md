@@ -157,6 +157,9 @@ daily分支发布 [powerd by [alimama-deploy](http://gitlab.alibaba-inc.com/thx/
       "chartParkIndexPath": "src/app/chartpark/index.js", //生成本地chartPark完整主文件(包含图表配置)的路径
       "chartParkIndexTmpl": "./magix-cli-models-tmpl/chartParkIndexTmpl.js", //生成本地chartPark完整主文件的模板文件
 
+      //magix相关配置
+      "magixPath": "src/lib/magix.js" //mm magix同步magix库文件到项目中的路径
+
       //mx generate相关配置
       "codeTmpl": "./magix-cli-tmpl", //mx generate 生成view代码片段的本地模板
 
