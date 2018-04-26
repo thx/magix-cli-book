@@ -98,6 +98,10 @@ magix3 组件相关命令，同步组件到本地项目中，支持配置多组�
 
 在[chartpark](https://chartpark.alibaba-inc.com)平台操作并打包完后，执行 `mx chartpark` 将 chartpark 平台打包生成的完整图表文件及配置同步到本地项目中，免去了项目中时时修改版本号的麻烦
 
+#### # `mx magix`
+
+package.json里配好magix版本后，执行`mx magix`即可安装包，并同步文件到 `magixCliConfig.magixPath` 里指定的路径里，可以选择不同打包方式的文件(amd/cmd等)
+
 
 #### # `mx daily`
 
