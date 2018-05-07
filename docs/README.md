@@ -1,4 +1,4 @@
-# magix-cli 
+# magix-cli 命令行工具
 
 
 本工具旨在基于脚手架快速创建magix项目，包括项目初始化，项目本地服务器运行（模拟接口基于[RAP](https://rap2.alibaba-inc.com)），项目发布等
