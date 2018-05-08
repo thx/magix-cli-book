@@ -35,12 +35,14 @@
 
     mx init
 
+  * 输入域账号/密码登录gitlab
   * 选择脚手架类型
-  * 输入你在gitlab创建好的项目的仓库地址 (会在当前目录下创建以你仓库名称为名的文件夹)
+  * 选择你的项目要创建在哪个groups下(gitlab)
+  * 输入项目名称 (会在当前目录下创建以项目名称为名的文件夹)
   * 输入你在RAP上创建好的项目的projectId [非必填]
   * 输入你在黄金令箭上创建好的场景ID [非必填]
 
-> init流程：系统会自动从相应类型的脚手架仓库`clone`代码到你的本地，并且设置`git remote`为你在gitlab上创建的项目，然后`tnpm install`所有的依赖包，同时执行`mx gallery`同步magix组件到本地，以及执行`mx models`同步rap上的接口到本地项目中
+> init流程：系统到gitlab平台上创建好项目，然后自动从相应类型的脚手架仓库`clone`代码到你的本地，并且设置`git remote`为gitlab的仓库地址，然后`tnpm install`所有的依赖包，同时执行`mx gallery`同步magix组件到本地，以及执行`mx models`同步rap上的接口到本地项目中
 
   ![mx init](https://img.alicdn.com/tfs/TB12mDrlwvD8KJjy0FlXXagBFXa-704-638.gif)
 
