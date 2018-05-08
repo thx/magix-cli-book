@@ -46,6 +46,7 @@
 
 
 #### 目前支持的脚手架类型：
+  1. [钻展风格后台管理脚手架](http://gitlab.alibaba-inc.com/mm/zs_scaffold)
   1. [BP后台管理脚手架](http://gitlab.alibaba-inc.com/thx/scaffold)
   2. [Minisite脚手架](http://gitlab.alibaba-inc.com/mm/minisite-scaffold)
   3. [cell-webpack-scaffold](http://gitlab.alibaba-inc.com/cell/cell-webpack-scaffold)
