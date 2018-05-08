@@ -28,7 +28,7 @@
 #### 在使用工具前请先做好几个准备工作：
 
   * 到gitlab上创建项目相应的仓库 ([Gitlab](http://gitlab.alibaba-inc.com))
-  * 到rap上创建相应项目(非必要) ([RAP](http://rap.alibaba-inc.com))
+  * 到rap上创建相应项目(非必要) ([RAP](http://rap2.alibaba-inc.com))
   * 到黄金令箭上创建项目(非必要) ([黄金令箭](http://log.alibaba-inc.com/gold/part/index.htm))
 
 #### 然后在你的工作目录执行：
