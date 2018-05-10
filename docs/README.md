@@ -1,4 +1,4 @@
-# magix-cli 命令行工具
+## magix-cli 命令行工具
 
 
 本工具旨在基于脚手架快速创建magix项目，包括项目初始化，项目本地服务器运行（模拟接口基于[RAP](https://rap2.alibaba-inc.com)），项目发布等
@@ -6,26 +6,22 @@
 
 ------------
 
-### 工具架构总览：
+#### 工具架构总览：
 [![magix-cli](https://img.alicdn.com/tfs/TB1FD2mlwvD8KJjy0FlXXagBFXa-1127-510.png)](https://img.alicdn.com/tfs/TB1FD2mlwvD8KJjy0FlXXagBFXa-1127-510.png)
 
 ----------
 
-### 使用方法：
+#### 使用方法：
 
-#### 全局安装cli工具：
+##### 全局安装cli工具：
 
     tnpm install -g @ali/magix-cli
 
 
 > 本工具依赖tnpm，请先安装tnpm： http://npm.alibaba-inc.com/profile
 
-> node版本最好是大于6.x，如果是升级上来的运行失败，尝试执行以下命令：
 
-> `$ curl -0 -L http://npmjs.org/install.sh | sudo sh`
-
-
-#### 然后在你的工作目录执行：
+##### 然后在你的工作目录执行：
 
     mx init
 
@@ -41,7 +37,7 @@
   ![mx init](https://img.alicdn.com/tfs/TB12mDrlwvD8KJjy0FlXXagBFXa-704-638.gif)
 
 
-#### 目前支持的脚手架类型：
+##### 目前支持的脚手架类型：
   1. [钻展风格后台管理脚手架](http://gitlab.alibaba-inc.com/mm/zs_scaffold)
   1. [BP后台管理脚手架](http://gitlab.alibaba-inc.com/thx/scaffold)
   2. [Minisite脚手架](http://gitlab.alibaba-inc.com/mm/minisite-scaffold)
@@ -50,14 +46,15 @@
   5. [cell-components-scaffold](http://gitlab.alibaba-inc.com/cell/cell-components-scaffold)
   6. [cell-lego-scaffold](http://gitlab.alibaba-inc.com/cell/cell-lego-scaffold)
 
+-------
 
-## 所有命令列表 mx -h
+#### 所有命令列表 mx -h
 
-#### # `mx init`
+##### # `mx init`
 
 初始化项目
 
-#### # `mx dev`
+##### # `mx dev`
 
 运行mat本地服务器，会自动打开浏览器，访问默认端口为1234的localhost
 
@@ -68,14 +65,14 @@
   > mx dev 已加入magix-desiger工具，详见 [magix-desiger](http://gitlab.alibaba-inc.com/thx/magix-desiger)
 
 
-#### # `mx models`
+##### # `mx models`
 
 根据当前项目RAP的projectId，自动生成models.js接口集合文件，对于接口的一些特殊处理，可以在src/app/service/project.js文件中处理 (默认在mx init初始化项目时就会自动执行该命令)
 
   > 建议实行rap接口与项目的强关联，不再在项目中维护models.js，新增接口都写在rap上，然后执行mx models同步到本地，以保持项目接口的统一与可维护性
 
 
-#### # `mx generate`
+##### # `mx generate`
 
 在当前目录下生成预设的view文件，包含view.html, view.js，支持输入目录结构(exp: src/app/views/test)
 
@@ -83,7 +80,7 @@
   2. 输入你要生成的view的path，相对于当前目录
   3. 输入你RAP上相关接口的id，则可根据rap上接口信息生成初步可用页面（非必填，不填则生成固定静态模板页）
 
-#### # `mx gallery`
+##### # `mx gallery`
 
 magix3 组件相关命令，同步组件到本地项目中，支持配置多组件仓库，配置项在package.json的magixCliConfig.galleries里 (key: 组件仓库名(支持@指定版本)，value: 组件同步到本地项目的路径)
 
@@ -91,39 +88,39 @@ magix3 组件相关命令，同步组件到本地项目中，支持配置多组�
   3. mx gallery -n <组件名> 指定同步某个组件，如果组件被修改过，则给出提示
   4. mx gallery -l 列出本地所有组件的版本信息
 
-#### # `mx chartpark`
+##### # `mx chartpark`
 
 在[chartpark](https://chartpark.alibaba-inc.com)平台操作并打包完后，执行 `mx chartpark` 将 chartpark 平台打包生成的完整图表文件及配置同步到本地项目中，免去了项目中时时修改版本号的麻烦
 
-#### # `mx magix`
+##### # `mx magix`
 
 package.json里配好magix版本后，执行`mx magix`即可安装包，并同步文件到 `magixCliConfig.magixPath` 里指定的路径里，可以选择不同打包方式的文件(amd/cmd等)
 
 
-#### # `mx daily`
+##### # `mx daily`
 
 daily分支发布 [powerd by [alimama-deploy](http://gitlab.alibaba-inc.com/thx/alimama-deploy)]
 
 > 新建的项目还未在aone上创建应用，会导致发布后无法正常获取发布状态，请先上aone注册该项目的应用
 
 
-#### # `mx publish`
+##### # `mx publish`
 
 发布到cdn生产环境，请在master分支下执行 [powerd by [alimama-deploy](http://gitlab.alibaba-inc.com/thx/alimama-deploy)]
 
 
-#### # `mx spmlog`
+##### # `mx spmlog`
 
 黄金令箭埋点 [powerd by [gulp-magix-spmlog](https://www.npmjs.com/package/gulp-magix-spmlog)]
 
-#### # `mmr <task>`
+##### # `mmr <task>`
 
 运行本地gulp任务，可配置 `-t grunt/webpack` 等运行其他构建工具
 
 
 ----------
 
-## 所有配置 magixCliConfig 
+#### 所有配置 magixCliConfig 
 所有配置在package.json的magixCliConfig中
 
     "magixCliConfig": {
