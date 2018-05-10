@@ -25,12 +25,6 @@
 > `$ curl -0 -L http://npmjs.org/install.sh | sudo sh`
 
 
-#### 在使用工具前请先做好几个准备工作：
-
-  * 到gitlab上创建项目相应的仓库 ([Gitlab](http://gitlab.alibaba-inc.com))
-  * 到rap上创建相应项目(非必要) ([RAP](http://rap2.alibaba-inc.com))
-  * 到黄金令箭上创建项目(非必要) ([黄金令箭](http://log.alibaba-inc.com/gold/part/index.htm))
-
 #### 然后在你的工作目录执行：
 
     mx init
@@ -38,9 +32,9 @@
   * 输入域账号/密码登录gitlab
   * 选择脚手架类型
   * 选择你的项目要创建在哪个groups下(gitlab)
-  * 输入项目名称 (会在当前目录下创建以项目名称为名的文件夹)
-  * 输入你在RAP上创建好的项目的projectId [非必填]
-  * 输入你在黄金令箭上创建好的场景ID [非必填]
+  * 输入项目名称 (会以该名称在gitlab平台上创建仓库，并在当前目录下创建以项目名称为名的文件夹)
+  * 输入你在RAP上创建好的项目的projectId [非必填，需要你先在[RAP](http://rap2.alibaba-inc.com)上面创建好项目]
+  * 输入你在黄金令箭上创建好的场景ID [非必填，需要你先在[黄金令箭](http://log.alibaba-inc.com/gold/part/index.htm)上创建好项目]
 
 > init流程：系统到gitlab平台上创建好项目，然后自动从相应类型的脚手架仓库`clone`代码到你的本地，并且设置`git remote`为gitlab的仓库地址，然后`tnpm install`所有的依赖包，同时执行`mx gallery`同步magix组件到本地，以及执行`mx models`同步rap上的接口到本地项目中
 
