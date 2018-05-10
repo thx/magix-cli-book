@@ -82,7 +82,7 @@
 
 ##### # `mx gallery`
 
-magix3 组件相关命令，同步组件到本地项目中，支持配置多组件仓库，配置项在package.json的magixCliConfig.galleries里 (key: 组件仓库名(支持@指定版本)，value: 组件同步到本地项目的路径)
+magix3 组件相关命令，同步组件到本地项目中，支持配置多组件仓库，配置项在`package.json`的`magixCliConfig.galleries`里 (key: 组件仓库名(支持@指定版本)，value: 组件同步到本地项目的路径)
 
   1. mx gallery 根据package.json里的magixCliConfig.galleries配置安装组件包并同步到本地项目中，如果本地组件有修改过，给出提示
   3. mx gallery -n <组件名> 指定同步某个组件，如果组件被修改过，则给出提示
@@ -90,7 +90,7 @@ magix3 组件相关命令，同步组件到本地项目中，支持配置多组�
 
 ##### # `mx chartpark`
 
-与[chartpark](https://chartpark.alibaba-inc.com)平台联动的专属命令，需要你在chartpark平台创建好项目后，配置项目id到magixCliConfig.chartparkId里，然后平台操作添加图表等并打包完后，执行 `mx chartpark` 将 chartpark 平台打包生成的完整图表文件及配置同步到本地项目中，免去了在项目中调试图表配置效果繁琐
+与[chartpark](https://chartpark.alibaba-inc.com)平台联动的专属命令，需要你在chartpark平台创建好项目后，配置项目id到`magixCliConfig.chartParkId`里，然后平台操作添加图表等并打包完后，执行 `mx chartpark` 将 chartpark 平台打包生成的完整图表文件及配置同步到本地项目中，免去了在项目中调试图表配置效果繁琐
 
 ##### # `mx magix`
 
@@ -111,7 +111,7 @@ daily分支发布 [powerd by [alimama-deploy](http://gitlab.alibaba-inc.com/thx/
 
 ##### # `mx spmlog`
 
-黄金令箭埋点 [powerd by [gulp-magix-spmlog](https://www.npmjs.com/package/gulp-magix-spmlog)]，该命令会同步执行同步[数据小站](https://data.alimama.net/)的配置文件到项目中
+黄金令箭埋点 [powerd by [gulp-magix-spmlog](https://www.npmjs.com/package/gulp-magix-spmlog)]，该命令会同时执行同步[数据小站](https://data.alimama.net/)的配置文件到项目中
 
 ##### # `mmr <task>`
 
