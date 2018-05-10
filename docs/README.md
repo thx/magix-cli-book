@@ -90,11 +90,11 @@ magix3 组件相关命令，同步组件到本地项目中，支持配置多组�
 
 ##### # `mx chartpark`
 
-在[chartpark](https://chartpark.alibaba-inc.com)平台操作并打包完后，执行 `mx chartpark` 将 chartpark 平台打包生成的完整图表文件及配置同步到本地项目中，免去了项目中时时修改版本号的麻烦
+与[chartpark](https://chartpark.alibaba-inc.com)平台联动的专属命令，需要你在chartpark平台创建好项目后，配置项目id到magixCliConfig.chartparkId里，然后平台操作添加图表等并打包完后，执行 `mx chartpark` 将 chartpark 平台打包生成的完整图表文件及配置同步到本地项目中，免去了在项目中调试图表配置效果繁琐
 
 ##### # `mx magix`
 
-package.json里配好magix版本后，执行`mx magix`即可安装包，并同步文件到 `magixCliConfig.magixPath` 里指定的路径里，可以选择不同打包方式的文件(amd/cmd等)
+package.json里配好magix版本后，执行`mx magix`即可安装包，并同步`magix`库文件到 `magixCliConfig.magixPath` 里指定的路径里，可以选择不同打包方式的文件(amd/cmd等)
 
 
 ##### # `mx daily`
@@ -111,7 +111,7 @@ daily分支发布 [powerd by [alimama-deploy](http://gitlab.alibaba-inc.com/thx/
 
 ##### # `mx spmlog`
 
-黄金令箭埋点 [powerd by [gulp-magix-spmlog](https://www.npmjs.com/package/gulp-magix-spmlog)]
+黄金令箭埋点 [powerd by [gulp-magix-spmlog](https://www.npmjs.com/package/gulp-magix-spmlog)]，该命令会同步执行同步[数据小站](https://data.alimama.net/)的配置文件到项目中
 
 ##### # `mmr <task>`
 
