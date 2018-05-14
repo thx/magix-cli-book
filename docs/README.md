@@ -25,6 +25,8 @@
 
     mx init
 
+详细步骤：
+
   * 输入域账号/密码登录gitlab
   * 选择脚手架类型
   * 选择你的项目要创建在哪个groups下(gitlab)
@@ -34,7 +36,7 @@
 
 > init流程：系统到gitlab平台上创建好项目，然后自动从相应类型的脚手架仓库`clone`代码到你的本地，并且设置`git remote`为gitlab的仓库地址，然后`tnpm install`所有的依赖包，同时执行`mx gallery`同步magix组件到本地，以及执行`mx models`同步rap上的接口到本地项目中
 
-  ![mx init](https://img.alicdn.com/tfs/TB12mDrlwvD8KJjy0FlXXagBFXa-704-638.gif)
+  ![mx init](https://img.alicdn.com/tfs/TB1SuCprDtYBeNjy1XdXXXXyVXa-1436-1226.gif)
 
 
 ##### 目前支持的脚手架类型：
