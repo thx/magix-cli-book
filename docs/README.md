@@ -43,6 +43,7 @@
   1. [钻展风格后台管理脚手架](http://gitlab.alibaba-inc.com/mm/zs_scaffold)
   1. [BP后台管理脚手架](http://gitlab.alibaba-inc.com/thx/scaffold)
   2. [Minisite脚手架](http://gitlab.alibaba-inc.com/mm/minisite-scaffold)
+  2. [联盟后台脚手架](http://gitlab.alibaba-inc.com/mm/union_scaffold)
   3. [cell-webpack-scaffold](http://gitlab.alibaba-inc.com/cell/cell-webpack-scaffold)
   4. [cell-lib-scaffold](http://gitlab.alibaba-inc.com/cell/cell-lib-scaffold)
   5. [cell-components-scaffold](http://gitlab.alibaba-inc.com/cell/cell-components-scaffold)
@@ -164,10 +165,11 @@ daily分支发布 [powerd by [alimama-deploy](http://gitlab.alibaba-inc.com/thx/
       "codeTmpl": "./magix-cli-tmpl", //mx generate 生成view代码片段的本地模板
 
       //mx gallery相关配置
-      "galleries": { //key: 组件名，value: 组件同步到项目中的路径
-        "magix-gallery@1.3.10": "src/app/gallery", //magix官方组件库，可以@指定组件库版本
-        "other-gallery": "src/app/other-gallery" //可配置其他自维护的组件库
-      },
+      "galleries": [{
+        "name": "magix-gallery@1.3.10", //组件库名称，可以@指定组件库版本
+        "path": "src/app/gallery", //组件同步到项目中的路径
+        "ignoreFiles": "mx-style/_vars_override.less" //可配置忽略修改校验提示的文件，通常是用于在项目中覆盖组件样式的文件
+      }]
 
       //magix-desiger配置
       "magixDesigerTemplate": "@ali/magix-desiger-bptemplate", //magix-desiger工具所依赖的模板
