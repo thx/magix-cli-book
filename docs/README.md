@@ -136,7 +136,11 @@ magix3 组件相关命令，同步组件到本地项目中，支持配置多组�
       //项目开发相关
       "matPort": "8888", //本地起的开发服务器的端口
       "matProxyPass": "140.205.173.181", //反向代理的ip, mx dev -d时默认用到的ip
-      "ipConfigPath": "./ip.config", //mx dev -d 时如果有本地的ip.config文件，则从本地获取开发环境ip
+      "ipConfig": { //mx dev -d 时提供可选的反向代理ip列表，有该值则覆盖matProxyPass配置
+        "预发一套": "140.205.173.181",
+        "预发二套": "140.205.173.180", 
+        "日常": "11.163.168.1"
+      }, 
       "devCommand": "mat rap", // mx dev时启动的mat命令
       "proxyCommand": "mat proxy", //mx dev -d 时启动的mat命令
 
