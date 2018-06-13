@@ -141,8 +141,21 @@ magix3 组件相关命令，同步组件到本地项目中，支持配置多组�
         "预发二套": "140.205.173.180", 
         "日常": "11.163.168.1"
       }, 
-      "devCommand": "mat rap", // mx dev时启动的mat命令
-      "proxyCommand": "mat proxy", //mx dev -d 时启动的mat命令
+      "galleriesMxRoot": "app/gallery/", //组件的目录
+      "timeout": 10000, //设置本地服务的请求响应时间，单位ms
+      "autoOpenUrl": "http://localhost", //设置 mm dev后自动打开的页面地址
+      "apiMatch": [ //设置对接RAP或反向代理的接口的规则
+          "api/",
+          ".json",
+          ".action"
+      ],
+      "indexMatch": "index.html", //设置入口文件
+      "cssSelectorPrefix": "_zs_scaffold", //设置magix-combine的scoped样式的前缀
+      "scopedCss": [ //设置magix-combine指定scoped样式
+          "./src/app/assets/layout.less"
+      ],
+      "devCommand": "mat rap", // 自定义mx dev时启动的本地RAP服务，一般不需要配置，cli工具内置了
+      "proxyCommand": "mat proxy", //自定义mx dev时启动的反向代理接口服务，一般不需要配置，cli工具内置了
 
       //RAP相关配置
       "rapVersion": "2", //指定使用rap1/rap2
@@ -152,7 +165,9 @@ magix3 组件相关命令，同步组件到本地项目中，支持配置多组�
       "modelsTmpl": "./magix-cli-models-tmpl/models.js", //mx models生成的models.js的文件模板
 
       //发布相关
-      "buildCommand": "gulp build", //指定mx daily/publish要执行的项目构建任务名，默认gulp build
+      "srcFolder": "src", //项目源文件目录
+      "buildFolder": "build" //项目编译打包目标目录
+      "buildCommand": "gulp build", //自定义mx daily/publish要执行的项目构建任务名，一般不需要配置，cli工具内置了构建任务
       "publishDaily": false, //默认mx publish只能在master下执行，配置为true可直接将当前daily分支发布掉,
 
       //埋点数据相关配置
@@ -160,7 +175,8 @@ magix3 组件相关命令，同步组件到本地项目中，支持配置多组�
       "spma": "a2e17", //spm的a段
       "dataPlusConfigPath": "src/app/dataplus/config.js", //数据小站需要的相关的配置信息文件，自动生成地址
       "dataPlusConfigTmpl": "./magix-cli-models-tmpl/config.js", //数据小站需要的相关的配置信息文件的模板文件
-      "spmCommand": "gulp spmlog", //mx spmlog内部执行的spm打点命令，定义在gulpfile.js里
+      "spmFolder": "src/app/views" //mx spmlog打点指定的文件夹，通常是view页面
+      "spmCommand": "gulp spmlog", //自定义mx spmlog打点执行的本地命令，一般不需要配置，cli工具内置了打点命令
 
       //chartPark相关配置
       "chartParkId": "1234",
@@ -194,4 +210,3 @@ magix3 组件相关命令，同步组件到本地项目中，支持配置多组�
 
 
 [semver](http://semver.org/)
-
