@@ -154,6 +154,11 @@ magix3 组件相关命令，同步组件到本地项目中，支持配置多组�
       "scopedCss": [ //设置magix-combine指定scoped样式
           "./src/app/assets/layout.less"
       ],
+      "globalCss": [ //设置magix-combine指定global全局样式
+          "./src/app/assets/iconfont.less",
+          "./src/app/gallery/mx-style/index.less",
+          "./src/app/assets/lib.less"
+      ],
       "devCommand": "mat rap", // 自定义mx dev时启动的本地RAP服务，一般不需要配置，cli工具内置了
       "proxyCommand": "mat proxy", //自定义mx dev时启动的反向代理接口服务，一般不需要配置，cli工具内置了
 
