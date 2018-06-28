@@ -141,6 +141,7 @@ magix3 组件相关命令，同步组件到本地项目中，支持配置多组�
         "预发二套": "140.205.173.180", 
         "日常": "11.163.168.1"
       }, 
+      "protocolAlias": "http", //可以指定反向代理接口的协议，有些预发环境限制接口只能是https访问
       "galleriesMxRoot": "app/gallery/", //组件的目录
       "timeout": 10000, //设置本地服务的请求响应时间，单位ms
       "autoOpenUrl": "http://localhost", //设置 mm dev后自动打开的页面地址
