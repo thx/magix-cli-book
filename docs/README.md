@@ -73,6 +73,8 @@
     - mm dev -d [ip] 全局注入标识 `window.__isDaily__ = true`
     - mm dev -o [ip]全局注入标识 `window.__isOnline__ = true`
 
+  * mx dev --closeHmr 支持关闭热更新功能
+
   * mx dev 已加入magix-desiger工具，详见 [magix-desiger](http://gitlab.alibaba-inc.com/thx/magix-desiger)
 
 
