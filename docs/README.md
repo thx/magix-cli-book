@@ -40,8 +40,7 @@
 
 
 ##### 目前支持的脚手架类型：
-  1. [钻展风格后台管理脚手架](http://gitlab.alibaba-inc.com/mm/zs_scaffold)
-  1. [BP后台管理脚手架](http://gitlab.alibaba-inc.com/thx/scaffold)
+  1. [后台管理脚手架](http://gitlab.alibaba-inc.com/mm/zs_scaffold)
   2. [Minisite脚手架](http://gitlab.alibaba-inc.com/mm/minisite-scaffold)
   2. [联盟后台脚手架](http://gitlab.alibaba-inc.com/mm/union_scaffold)
   3. [cell-webpack-scaffold](http://gitlab.alibaba-inc.com/cell/cell-webpack-scaffold)
@@ -61,11 +60,20 @@
 
 运行mat本地服务器，会自动打开浏览器，访问默认端口为1234的localhost
 
-  *   mx dev 默认开启接口调用RAP平台返回模拟数据 (需要在package.json里配好RAP的项目id, `magixCliConfig.rapProjectId`)
-  *   mx dev -d 10.22.34.55 可以切换接口访问真实开发接口 (格式：-d [ip]，ip可以是daily或预发)
-  *   mx dev -p 7777 可以指定端口，如果指定80端口需sudo权限
+  * mx dev 默认开启接口调用RAP平台返回模拟数据 (需要在package.json里配好RAP的项目id, `magixCliConfig.rapProjectId`)
   
-  > mx dev 已加入magix-desiger工具，详见 [magix-desiger](http://gitlab.alibaba-inc.com/thx/magix-desiger)
+  * mx dev -d 10.22.34.55 可以切换接口访问真实开发接口 (格式：-d [ip]，ip可以是daily或预发)
+
+  > 如果magixCliConfig里配置好了ipConfig参数，则mx dev -d不用输入ip，会列出所有ipConfig配置下拉选择即可
+
+  * mx dev -p 7777 可以指定端口，如果指定80端口需sudo权限
+
+  * 本地开发时会进行当前开发环境的标识注入，方便一些情况下的环境判断（如对jsonp接口的特殊处理）：
+    - mm dev 全局注入标识 `window.__isRap__ = true`
+    - mm dev -d [ip] 全局注入标识 `window.__isDaily__ = true`
+    - mm dev -o [ip]全局注入标识 `window.__isOnline__ = true`
+
+  * mx dev 已加入magix-desiger工具，详见 [magix-desiger](http://gitlab.alibaba-inc.com/thx/magix-desiger)
 
 
 ##### # `mx models`
