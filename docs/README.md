@@ -120,7 +120,7 @@ magix3 组件相关命令，同步组件到本地项目中，支持配置多组�
 
 ##### # `mx chartpark`
 
-与[chartpark](https://chartpark.alibaba-inc.com)平台联动的专属命令，需要你在chartpark平台创建好项目后，配置项目id到`magixCliConfig.chartParkId`里，然后平台操作添加图表等并打包完后，执行 `mx chartpark` 将 chartpark 平台打包生成的完整图表文件及配置同步到本地项目中，免去了在项目中频繁调试图表效果的繁琐操作
+与[chartpark](https://chartpark.alibaba-inc.com)平台联动的专属命令，需要你在chartpark平台创建好项目后，配置项目id到`magixCliConfig.chartParkId`里，然后平台操作添加图表等并打包完后(请选择CDN打包)，执行 `mx chartpark` 将 chartpark 平台打包生成的完整图表文件及配置同步到本地项目中，免去了在项目中频繁调试图表效果的繁琐操作
 
 ##### # `mx magix`
 
