@@ -111,7 +111,7 @@ magix3 组件相关命令，同步组件到本地项目中，支持配置多组�
 
 一键发布当前daily分支（包含项目build，代码git pull/merge等，daily分支可复用），并可实时查看发布结果 [powerd by [alimama-deploy](http://gitlab.alibaba-inc.com/thx/alimama-deploy)]
 
-> 现已加入云构建，配置 "cloudBuild": true，同时项目中有abc.json配置文件即可，详情见 [http://def.alibaba-inc.com](http://def.alibaba-inc.com)
+> 现已接入云构建，详细配置见 [云构建](/cloudBuild)
 
 
 ##### # `mx publish`
