@@ -47,7 +47,7 @@
         }
     }
  ```
- > 注意：如果有 `"buildCommand": "gulp build"` 之类的配置，需要移除掉它
+ > 注意：如果magixCliConfig中有 `"buildCommand": "gulp build"` 之类的配置，需要移除掉它
 
 
 #### 写在最后
