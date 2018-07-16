@@ -2,7 +2,7 @@
 
 #### 仓库先接入云构建平台
 
-云构建有自己的发布管理平台，请先登录平台[DEF](http://engine.def.alibaba-inc.com/my#/project)，点击接入新仓库
+云构建有自己的发布管理平台，请先登录平台[DEF](http://engine.def.alibaba-inc.com/my#/project)，点击接入新仓库，输入你的项目git地址即可
 
 
 #### 项目场景
