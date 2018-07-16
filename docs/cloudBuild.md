@@ -2,7 +2,7 @@
 
 
 #### 准备工作
-- 升级magix-cli工具到最新版本 `tnpm install -g @ali/magix`
+- 升级magix-cli工具到最新版本 `tnpm install -g @ali/magix-cli`
 - 仓库接入云构建平台，请先登录平台[DEF](http://engine.def.alibaba-inc.com/my#/project)，点击接入新仓库，输入你的项目git地址即可
 
 
