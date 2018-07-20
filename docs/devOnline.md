@@ -8,6 +8,14 @@
 #### 如何配置？
 
 1. 在项目package.json的magixCliConfig中增加配置 `"protocolAlias": "https"`
+> 注意：对于一些matfile.js等配置文件还没未收敛进cli工具的老项目，需要手动升级package.json里的mat, mat-proxy包到最新版本，然后在matfile.js文件里配置
+```
+mat.url(apiPatterns)
+    .use(proxy({
+      proxyPass: matProxyPass,
+      protocolAlias: 'https'
+    }))
+```
 
 2. ping出你的项目的线上域名的ip地址，然后执行`sudo mx dev -d [线上ip地址]`，ip地址也可配置在项目magixCliConfig.matProxyPass中
 
