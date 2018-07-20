@@ -77,6 +77,8 @@
 
   * mx dev 已加入magix-desiger工具，详见 [magix-desiger](http://gitlab.alibaba-inc.com/thx/magix-desiger)
 
+  * mx dev 支持直接调试线上https真实接口环境，详见[调试线上https接口](/devOnline)
+
 
 ##### # `mx models`
 

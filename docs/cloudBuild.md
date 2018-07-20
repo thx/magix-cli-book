@@ -10,7 +10,7 @@
 
 由于历史原因目前项目一般分为两种情况
 
-1. 最近新mm init初始化成功的Magix3项目（特征是项目中不再有`combine-tool-config.js`, `matfile.js`, `gulpfile.js`等文件，因为已经收敛进cli工具中了）
+1. 最近新mx init初始化成功的Magix3项目（特征是项目中不再有`combine-tool-config.js`, `matfile.js`, `gulpfile.js`等文件，因为已经收敛进cli工具中了）
 
 2. 以前的老项目
 
@@ -52,6 +52,6 @@
 
 #### 写在最后
 
-配置完成后，发布流程与原来没有差别，还是原来的命令 `mm daily/publish` 即可
+配置完成后，发布流程与原来没有差别，还是原来的命令 `mx daily/publish` 即可
 
-> 需要注意的是云构建自动接入门神校验系统，`mm publish` 发正式cdn的时候，需要通过门神的校验才可以正常发布，校验结果可以查看仓库的检查日志
+> 需要注意的是云构建自动接入门神校验系统，`mx publish` 发正式cdn的时候，需要通过门神的校验才可以正常发布，校验结果可以查看仓库的检查日志
