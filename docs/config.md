@@ -23,14 +23,11 @@
           ".action"
       ],
       "indexMatch": "index.html", //设置入口文件
-      "cssSelectorPrefix": "_zs_scaffold", //设置magix-combine的scoped样式的前缀
       "scopedCss": [ //设置magix-combine指定scoped样式
-          "./src/app/assets/layout.less"
+          "./src/app/assets/iconfont.less"
       ],
       "globalCss": [ //设置magix-combine指定global全局样式
-          "./src/app/assets/iconfont.less",
-          "./src/app/gallery/mx-style/index.less",
-          "./src/app/assets/lib.less"
+          "./src/app/gallery/mx-style/index.less"
       ],
       "devCommand": "mat rap", // 自定义mx dev时启动的本地RAP服务，一般不需要配置，cli工具内置了
       "proxyCommand": "mat proxy", //自定义mx dev时启动的反向代理接口服务，一般不需要配置，cli工具内置了
