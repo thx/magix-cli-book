@@ -8,6 +8,7 @@
 2. 相关组件指`project/gallery/`目录下的组件，故该目录下的组件只能是统一提供的且版本相同的组件
 3. 当前项目中界面显示所需要的相关颜色，会由`/gallery/mx-style/`统一提供，自己在`view`中不应写死与品牌色有关的颜色
 
+
 ### 相关约定
 #### 包名约定
 `seajs`或`requirejs`需要配置一个包名来使用某个目录下的`js`文件，指向不同目录下的包名不能同名。这要求我们在开发新项目时，使用新项目的名称来做为包名，不能再像以前那样使用统一的`app`名称。
@@ -83,6 +84,8 @@ Magix.applyStyle('@scoped.style')
 ```
 >该目录里面的组件统一`lg-`前缀
 
+### magix-cli相关配置配合
+请在项目的package.json的magixCliConfig配置里增加 `"dynamicProjectName": true`
 
 ### 相关细节
 #### boot.ts
@@ -102,5 +105,11 @@ Magix.applyStyle('@scoped.style')
 #### project/view.ts
  1. 项目中所有`view`的基类为该文件，而不再是原来的`Magix.View`
  2. 该文件继承`Magix.View`，然后挂载项目中常用的方法等
+ 3. 在view的updater里增加pkgName配置
+ ```
+ this.updater.set({
+    pkgName: Magix.config('projectName')
+ });
+ ```
 
 > view.ts各自项目都保留一份，本质上是为了保持各自项目的一些特有非通用配置，比如 `Magix.config('zs_scaffold.user')` 等配置
