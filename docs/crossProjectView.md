@@ -84,7 +84,7 @@ Magix.applyStyle('@scoped.style')
 ```
 >该目录里面的组件统一`lg-`前缀
 
-### magix-cli相关配置配合
+#### magix-cli相关配置配合
 请在项目的package.json的magixCliConfig配置里增加 `"dynamicProjectName": true`
 
 ### 相关细节
@@ -106,10 +106,10 @@ Magix.applyStyle('@scoped.style')
  1. 项目中所有`view`的基类为该文件，而不再是原来的`Magix.View`
  2. 该文件继承`Magix.View`，然后挂载项目中常用的方法等
  3. 在view的updater里增加pkgName配置
- ```
- this.updater.set({
+```
+this.updater.set({
     pkgName: Magix.config('projectName')
- });
- ```
+});
+```
 
 > view.ts各自项目都保留一份，本质上是为了保持各自项目的一些特有非通用配置，比如 `Magix.config('zs_scaffold.user')` 等配置
