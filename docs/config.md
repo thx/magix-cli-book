@@ -31,6 +31,7 @@
       ],
       "devCommand": "mat rap", // 自定义mx dev时启动的本地RAP服务，一般不需要配置，cli工具内置了
       "proxyCommand": "mat proxy", //自定义mx dev时启动的反向代理接口服务，一般不需要配置，cli工具内置了
+      "dynamicProjectName": true, //指定加载的包名是否是动态的，在跨项目加载view时需要设置为true
 
       //RAP相关配置
       "rapVersion": "2", //指定使用rap1/rap2
