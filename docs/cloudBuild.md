@@ -1,12 +1,12 @@
-## magix-cli接入云构建
 
+> 以下教程适用于老项目，新mx init生成的项目默认已经接入了云构建，只须做`准备工作`即可
 
-#### 准备工作
+### 准备工作
 - 升级magix-cli工具到最新版本 `tnpm install -g @ali/magix-cli`
 - 仓库接入云构建平台，请先登录平台[DEF](http://engine.def.alibaba-inc.com/my#/project)，点击接入新仓库，输入你的项目git地址即可
 
 
-#### 项目场景
+### 项目场景
 
 由于历史原因目前项目一般分为两种情况
 
@@ -17,7 +17,7 @@
 两种项目接入方式略有不同
 
 
-#### 接入方法
+### 接入方法
 
 1. 对于新项目我们使用构建器构建，在package.json的magixCliConfig配置中增加 `"cloudBuild": true`，然后在项目根目录下放置 `abc.json`文件，填充以下内容即可
  ```
@@ -50,7 +50,7 @@
  > 注意：如果magixCliConfig中有 `"buildCommand": "gulp build"` 之类的配置，需要移除掉它
 
 
-#### 写在最后
+### 写在最后
 
 配置完成后，发布流程与原来没有差别，还是原来的命令 `mx daily/publish` 即可
 

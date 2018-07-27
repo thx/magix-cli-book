@@ -1,11 +1,10 @@
-## mx dev 对接线上真实https接口
 
 
-#### 背景说明
+### 背景说明
 通常情况下`mx dev -d [ip]`已经可以满足大部分联调接口场景，这里的ip可以是daily或预发环境的ip地址，但有时候需要联调对接线上真实的接口，而线上接口通常是https的，所以我们需要修改配置来实现
 
 
-#### 如何配置？
+### 如何配置？
 
 1. 在项目package.json的magixCliConfig中增加配置 `"protocolAlias": "https"`
 > 注意：对于一些matfile.js等配置文件还没未收敛进cli工具的老项目，需要手动升级package.json里的mat, mat-proxy包到最新版本，然后在matfile.js文件里配置
@@ -36,7 +35,7 @@ mat.url(apiPatterns)
 > 注意事项：如果你之前没绑host访问过线上正式带https的域名，如: `https://zuanshi.taobao.com`，则浏览器可能缓存了hsts，导致你访问 `http://zuanshi.taobao.com` 也会跳转至https，这种情况请到chrome的hsts设置页面，[chrome://net-internals/#hsts](chrome://net-internals/#hsts)，点击右上角下拉菜单的`clear cache`和`flush sockets`进行缓存清除 
 
 
-#### 为何不实现本地https？
+### 为何不实现本地https？
 
 1. 对于本地起https服务，需要本地生成自颁发证书，并认证通过，过程很繁琐，例如这个[教程](https://segmentfault.com/a/1190000007990972)
 

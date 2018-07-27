@@ -1,4 +1,4 @@
-## magix-cli
+### magix-cli
 
 
 本命令行工具旨在基于脚手架快速创建magix项目，包括项目环境初始化，项目本地服务器运行（接口模拟基于[RAP](https://rap2.alibaba-inc.com)），项目一键部署到aone等
@@ -6,14 +6,14 @@
 
 ------------
 
-#### 工具架构总览：
+### 工具架构总览
 [![magix-cli](https://img.alicdn.com/tfs/TB1VxWkrMmTBuNjy1XbXXaMrVXa-2202-1086.png)](https://img.alicdn.com/tfs/TB1VxWkrMmTBuNjy1XbXXaMrVXa-2202-1086.png)
 
 ----------
 
-#### 使用方法：
+### 使用方法
 
-##### 全局安装cli工具：
+#### 全局安装cli工具：
 
     tnpm install -g @ali/magix-cli
 
@@ -21,7 +21,7 @@
 > 本工具依赖tnpm，请先安装tnpm： http://npm.alibaba-inc.com/profile
 
 
-##### 然后在你的工作目录执行：
+#### 然后在你的工作目录执行：
 
     mx init
 
@@ -39,7 +39,7 @@
   ![mx init](https://img.alicdn.com/tfs/TB1SuCprDtYBeNjy1XdXXXXyVXa-1436-1226.gif)
 
 
-##### 目前支持的脚手架类型：
+### 目前支持的脚手架类型
   1. [后台管理脚手架](http://gitlab.alibaba-inc.com/mm/zs_scaffold)
   2. [Minisite脚手架](http://gitlab.alibaba-inc.com/mm/minisite-scaffold)
   2. [联盟后台脚手架](http://gitlab.alibaba-inc.com/mm/union_scaffold)

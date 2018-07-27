@@ -1,6 +1,6 @@
 
 
-#### 所有配置说明 magixCliConfig 
+#### 配置说明
 所有配置在项目的package.json的magixCliConfig中
 
     "magixCliConfig": {

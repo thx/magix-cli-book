@@ -1,4 +1,3 @@
-## 跨项目共享view
 
 ### 背景说明
 使用`magix`提供的`vframe`功能，允许项目间类似`iframe`那样引用对方的`view`。该功能亦可把复杂的项目进行拆分成`n`个子项目进行维护
@@ -47,7 +46,24 @@ seajs.config({
 Magix.applyStyle('@scoped.style')
 ```
 
-#### 接口对接问题
+#### 通用`view`约定
+通用`view`(或称之为组件)目前是使用`zs_gallery`这个仓库，并通过`magix-cli`中的`mx gallery`这个命令把这个仓库中的代码同步到`project/gallery`这个目录下。我们约定`project/gallery`这个目录只能从远程仓库中同步代码，不能自己添加、修改该目录下的组件(如果需要修改请参考`本地组件约定`)。
+
+#### 本地组件约定
+项目中`gallery-local`为当前项目提供的本地组件所在的目录，当前项目中通用的，或通用组件不能满足项目需求时，在该目录下添加自己需要的组件进行处理
+
+```bash
+- lg-chart
+    index.ts
+    index.html
+    index.less
+```
+>该目录里面的组件统一`lg-`前缀
+
+#### magix-cli相关配置
+请在项目的package.json的magixCliConfig配置里增加 `"dynamicProjectName": true`
+
+### 接口对接问题
 - 首先先到主项目的rap2平台配置协同仓库，将项目所要跨项目加载的所有其他仓库，加到协同仓库配置里
 
 - 各自项目的接口地址依然为相对地址，如：`api/get/list.json`，然后在项目的 `services/project.js` 判断是线上环境时对接口做统一处理，加上：`https://zuanshi.taobao.com/` 之类的前缀
@@ -69,23 +85,6 @@ Magix.applyStyle('@scoped.style')
 
 - 在主项目进行 `mm dev -d` 进行本地开发时，访问到加载的子项目的view时，可能会遇到子项目请求的接口无法正常请求的情况
 
-
-#### 通用`view`约定
-通用`view`(或称之为组件)目前是使用`zs_gallery`这个仓库，并通过`magix-cli`中的`mx gallery`这个命令把这个仓库中的代码同步到`project/gallery`这个目录下。我们约定`project/gallery`这个目录只能从远程仓库中同步代码，不能自己添加、修改该目录下的组件(如果需要修改请参考`本地组件约定`)。
-
-#### 本地组件约定
-项目中`gallery-local`为当前项目提供的本地组件所在的目录，当前项目中通用的，或通用组件不能满足项目需求时，在该目录下添加自己需要的组件进行处理
-
-```bash
-- lg-chart
-    index.ts
-    index.html
-    index.less
-```
->该目录里面的组件统一`lg-`前缀
-
-#### magix-cli相关配置配合
-请在项目的package.json的magixCliConfig配置里增加 `"dynamicProjectName": true`
 
 ### 相关细节
 #### boot.ts
