@@ -38,7 +38,7 @@ mat.url(apiPatterns)
 
 现在支持在命令行中直接启用https接口模式，输入 `sudo mx dev -d --https` 即可
 
-### 为何不实现本地https？
+### 为何不实现本地起https服务？
 
 1. 对于本地起https服务，需要本地生成自颁发证书，并认证通过，过程很繁琐，例如这个[教程](https://segmentfault.com/a/1190000007990972)
 
