@@ -22,7 +22,7 @@
           ".json",
           ".action"
       ],
-      "indexMatch": "index.html", //设置入口文件
+      "indexMatch": ["index.html"], //设置入口文件,支持多个入口文件
       "scopedCss": [ //设置magix-combine指定scoped样式
           "./src/app/assets/iconfont.less"
       ],
