@@ -66,7 +66,10 @@ Magix.applyStyle('@scoped.style')
 ### 接口对接问题
 - 首先先到主项目的rap2平台配置协同仓库，将项目所要跨项目加载的所有其他仓库，加到协同仓库配置里
 
-- 各自项目的接口地址依然为相对地址，如：`api/get/list.json`，然后在项目的 `services/project.js` 判断是线上环境时对接口做统一处理，加上：`https://zuanshi.taobao.com/` 之类的前缀
+- 然后在主项目的`boot.ts`里配置好要加载的子项目的接口host，如`Magix.config('dna.api.host', 'https://dna.taobao.com')`
+
+- 然后在子项目的 `services/sevice.ts` 和 `prepare.ts` 里请求接口的url前加上`apiHost`，如`let apiHost = Magix.config('dna.api.host')`
+
 	##### 如何判断线上环境？
 
     magix-cli已经为开发状态注入了各种环境标识，如：
