@@ -64,9 +64,7 @@ Magix.applyStyle('@scoped.style')
 请在项目的package.json的magixCliConfig配置里增加 `"dynamicProjectName": true`
 
 ### 接口对接问题
-- 首先先到主项目的rap2平台配置协同仓库，将项目所要跨项目加载的所有其他仓库，加到协同仓库配置里
-
-- 然后在主项目的`boot.ts`里配置好要加载的子项目的接口host，如`Magix.config('dna.api.host', 'https://dna.taobao.com')`，请严格遵照 `[项目名].api.host` 格式
+- 首先在主项目的`boot.ts`里配置好要加载的子项目的接口host，如`Magix.config('dna.api.host', 'https://dna.taobao.com')`，请严格遵照 `[项目名].api.host` 格式
 
 - 然后在子项目的 `services/sevice.ts` 和 `prepare.ts` 里请求接口的url前加上`apiHost`，如`let apiHost = Magix.config('dna.api.host')`
 
