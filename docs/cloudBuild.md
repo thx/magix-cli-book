@@ -41,8 +41,8 @@
             "type":"command",
             "command":{
                 "cmd":[
-                    "tnpm install",
-                    "npx gulp build", //这里的gulp build是项目原来的打包命令，请根据实际填写
+                    "tnpm install", 
+                    "npx gulp build", //这里的gulp build是项目原来的打包命令，请根据实际填写 (如果没有打包过程可以去掉这行命令)
                     "mv ./build $BUILD_DEST"
                 ]
             }
@@ -57,3 +57,8 @@
 配置完成后，发布流程与原来没有差别，还是原来的命令 `mx daily/publish` 即可
 
 > 需要注意的是云构建自动接入门神校验系统，`mx publish` 发正式cdn的时候，需要通过门神的校验才可以正常发布，校验结果可以查看仓库的检查日志
+
+### 常见的门神错误
+
+1. 资源引用url地址使用了http协议，需要改成`//dmp.taobao.com`之类的形式
+2. build构建后代码包含了注释，通常发生在build文件下保留了源文件的情形，需要修改下原来的build逻辑，只构建生成压缩后的代码
