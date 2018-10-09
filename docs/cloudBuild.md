@@ -3,7 +3,9 @@
 
 ### 准备工作
 - 升级magix-cli工具到最新版本 `tnpm install -g @ali/magix-cli`
-- 仓库接入云构建平台，请先登录平台[DEF](http://engine.def.alibaba-inc.com/my#/project)，点击接入新仓库，输入你的项目git地址即可
+- 仓库接入云构建平台，请先登录平台[DEF](http://engine.def.alibaba-inc.com/my#/project)，点击接入新仓库，输入你的项目git地址根据提示操作
+- 接入成功后到仓库设置界面开启 `代码检查失败拦截日常发布` 设置，如下图：
+  ![img](https://img.alicdn.com/tfs/TB13.HkgAvoK1RjSZFwXXciCFXa-1198-490.png)
 
 
 ### 项目场景
