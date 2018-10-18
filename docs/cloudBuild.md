@@ -52,6 +52,22 @@
  ```
  > 注意：如果magixCliConfig中有 `"buildCommand": "gulp build"` 之类的配置，需要移除掉它
 
+3. 以上两种都是在云端执行构建脚本，有些老的项目希望还是在本地构建，然后再发布，这种情形的话，`abc.json`的配置如下：
+
+```
+    {
+        "assets":{
+            "type":"command",
+            "command":{
+                "cmd":[
+                    "mv ./build $BUILD_DEST" //去掉构建逻辑只保留这行
+                ]
+            }
+        }
+    }
+ ```
+ > 此时 magixCliConfig 中需要配置 `"buildCommand": "gulp build"` 之类的本地构建逻辑，`mm daily/publish` 时会先在本地执行该构建逻辑，然后再进行云构建发布
+
 
 ### 写在最后
 
