@@ -60,7 +60,7 @@
             "type":"command",
             "command":{
                 "cmd":[
-                    "mv ./build $BUILD_DEST" //去掉构建逻辑只保留这行
+                    "mv ./build $BUILD_DEST" //去掉构建逻辑只保留这行, build是构建后的文件夹，可根据实际填写
                 ]
             }
         }
