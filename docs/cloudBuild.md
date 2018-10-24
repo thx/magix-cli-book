@@ -1,12 +1,10 @@
 
-> 以下教程适用于老项目，新mx init生成的项目默认已经接入了云构建，只须做`准备工作`即可
+> 以下教程适用于老项目或未接入magix-cli工具的项目，新mx init生成的项目默认已经接入了云构建，只须做`准备工作`即可
 
 ### 准备工作
 - 升级magix-cli工具到最新版本 `tnpm install -g @ali/magix-cli`
 - 项目的package.json里的magixCliConfig增加配置 `"cloudBuild": true`
 - 仓库接入云构建平台，请先登录平台[DEF](http://engine.def.alibaba-inc.com/my#/project)，点击接入新仓库，输入你的项目git地址根据提示操作
-- 接入成功后到仓库设置界面开启 `代码检查失败拦截日常发布` 设置，如下图：`(此配置是必要的)`
-  ![img](https://img.alicdn.com/tfs/TB13.HkgAvoK1RjSZFwXXciCFXa-1198-490.png)
 
 
 ### 项目场景
@@ -69,9 +67,12 @@
  > 此时 magixCliConfig 中需要配置 `"buildCommand": "gulp build"` 之类的本地构建逻辑，`mm daily/publish` 时会先在本地执行该构建逻辑，然后再进行云构建发布
 
 
-### 写在最后
+### 一切就绪
 
-配置完成后，发布流程与原来没有差别，还是原来的命令 `mx daily/publish` 即可
+配置完成后，就可以执行 `mx daily/publish` 来进行云构建发布了
+
+- `mx daily`: 日常发布，比如在你的开发分支daily/0.0.1下执行，可以重复发布
+- `mx publish`: 正式发布，需要在master下执行（先将开发分支如daily/0.0.1合到你的master分支，再执行本命令，会自动根据当前时间戳发布一个正式版本，与你的开发分支daily/0.0.1相对独立）
 
 > 需要注意的是云构建自动接入门神校验系统，`mx publish` 发正式cdn的时候，需要通过门神的校验才可以正常发布，校验结果可以查看仓库的检查日志
 
