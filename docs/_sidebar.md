@@ -5,7 +5,7 @@
     * [接入云构建](cloudBuild)
     * [本地开发调试线上https接口](devOnline)
     * [spm埋点](spmlog)
-
+    * [接入clue](clue)
 * 项目相关约定
 
     * [跨项目共享view](crossProjectView)
