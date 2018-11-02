@@ -1,8 +1,8 @@
-clue是前端异常实时监控平台，能够实时监控线上错误，并报警。https://clue.alibaba-inc.com。
+clue是前端异常实时监控平台，能够实时监控线上错误，并报警。https://clue.alibaba-inc.com
 #### 新项目
 通过1.1.56之后版本的magix-cli工具，mx init脚手架创建的项目，已经内置接入了clue平台。开发者要查看数据，只要做1件事
 
-告诉magic-cli作者（崇志），新建的项目名称，帮你开通权限。之后就可以到https://clue.alibaba-inc.com。查看了。
+告诉magic-cli作者（崇志），新建的项目名称，帮你开通权限。之后就可以查看了。https://clue.alibaba-inc.com
 
 
 #### 已有项目
@@ -19,7 +19,7 @@ clue是前端异常实时监控平台，能够实时监控线上错误，并报�
 
 ![img](https://img.alicdn.com/tfs/TB1fM81mSzqK1RjSZFHXXb3CpXa-636-684.png)
 
-3.把track.js放入本地lib文件夹下，文件cdn地址：https://g.alicdn.com/dt/tracker/4.0.3/tracker.Tracker.js。
+3.把track.js放入本地lib文件夹下，文件cdn地址：https://g.alicdn.com/dt/tracker/4.0.3/tracker.Tracker.js
 
 注意：文件开头要加上
 
