@@ -65,6 +65,7 @@
 
       //magix相关配置
       "magixPath": "src/lib/magix.js" //mm magix同步magix库文件到项目中的路径
+      "magixModuleType": "cmd" //要同步的magix的打包版本，默认为cmd，可选择项：amd,cmd,kissy,module,webpack
 
       //mx generate相关配置
       "codeTmpl": "./magix-cli-tmpl", //mx generate 生成view代码片段的本地模板
