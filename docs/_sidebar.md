@@ -6,6 +6,7 @@
     * [本地开发调试线上https接口](devOnline)
     * [spm埋点](spmlog)
     * [接入clue](clue)
+    * [Magix Desiger Tool](desiger)
 * 项目相关约定
 
     * [跨项目共享view](crossProjectView)
