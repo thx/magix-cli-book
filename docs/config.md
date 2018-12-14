@@ -57,6 +57,7 @@
       "dataPlusConfigTmpl": "./magix-cli-models-tmpl/config.js", //数据小站需要的相关的配置信息文件的模板文件
       "spmFolder": "src/app/views" //mx spmlog打点指定的文件夹，通常是view页面
       "spmCommand": "gulp spmlog", //自定义mx spmlog打点执行的本地命令，一般不需要配置，cli工具内置了打点命令
+      "spmPropertyMatch": ["to=\"", ":to=\""], //支持mm spmlog自定义属性匹配规则
 
       //chartPark相关配置
       "chartParkId": "1234",
@@ -76,6 +77,10 @@
         "path": "src/app/gallery", //组件同步到项目中的路径
         "ignoreFiles": "mx-style/_vars_override.less" //可配置忽略修改校验提示的文件，通常是用于在项目中覆盖组件样式的文件
       }]
+
+      //周边相关项目id
+      "defId": "2233", //DEF云构建的项目id
+      "iconfontId": "48", //iconfont的项目id
 
       //magix-desiger配置
       "magixDesigerTemplate": "@ali/magix-desiger-bptemplate", //magix-desiger工具所依赖的模板
