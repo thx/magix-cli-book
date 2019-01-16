@@ -41,7 +41,6 @@
 
 ### 目前支持的脚手架类型
   1. [后台管理脚手架](http://gitlab.alibaba-inc.com/mm/zs_scaffold)
-  2. [Minisite脚手架](http://gitlab.alibaba-inc.com/mm/minisite-scaffold)
   2. [联盟后台脚手架](http://gitlab.alibaba-inc.com/mm/union_scaffold)
   3. [cell-webpack-scaffold](http://gitlab.alibaba-inc.com/cell/cell-webpack-scaffold)
   4. [cell-lib-scaffold](http://gitlab.alibaba-inc.com/cell/cell-lib-scaffold)
