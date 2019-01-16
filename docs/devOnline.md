@@ -37,7 +37,7 @@ mat.url(apiPatterns)
 
 ### 快捷进入https接口模式
 
-现在支持在命令行中直接启用https接口模式，输入 `sudo mx dev -d --https` 即可
+现在支持在命令行中增加`--https`参数来直接启用https接口模式，例如: `sudo mx dev -d --https` 
 
 ### 为何不实现本地起https服务？
 
