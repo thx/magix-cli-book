@@ -34,6 +34,7 @@ mat.url(apiPatterns)
 
 > 注意事项：如果你之前没绑host访问过线上正式带https的域名，如: `https://zuanshi.taobao.com`，则浏览器可能缓存了hsts，导致你访问 `http://zuanshi.taobao.com` 也会跳转至https，这种情况请到chrome的hsts设置页面，[chrome://net-internals/#hsts](chrome://net-internals/#hsts)，在以下设置模块清除你的域名的hsts缓存
 ![](https://img.alicdn.com/tfs/TB1FQzJCkvoK1RjSZPfXXXPKFXa-1552-184.png)
+同时别忘了清除缓存
 
 ### 快捷进入https接口模式
 
