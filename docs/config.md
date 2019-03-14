@@ -81,6 +81,8 @@
       //周边相关项目id
       "defId": "2233", //DEF云构建的项目id
       "iconfontId": "48", //iconfont的项目id
+      "iconfontScanPath": "src", //mm iconfont --check时扫描的路径
+      "iconfontPath": "src/zs_scaffold/assets/iconfont.less" //指定mm iconfont同步字体文件到项目中的路径
 
       //magix-desiger配置
       "magixDesigerTemplate": "@ali/magix-desiger-bptemplate", //magix-desiger工具所依赖的模板
