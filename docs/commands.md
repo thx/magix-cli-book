@@ -54,9 +54,9 @@ magix3 组件相关命令，同步组件到本地项目中，支持配置多组�
       "ignoreFiles": "mx-style/_vars_override.less" //可配置忽略修改校验提示的文件，通常是用于在项目中覆盖组件样式的文件
     }]
 
-  * mx gallery 同步组件仓库里的所有组件到项目中，如果本地组件有修改过，则给出提示
-  * mx gallery -n <组件名> 指定同步某个组件，如果组件被修改过，则给出提示
-  * mx gallery -l 列出本地所有组件的相关信息
+  * `mx gallery` 同步组件仓库里的所有组件到项目中，如果本地组件有修改过，则给出提示
+  * `mx gallery -n` <组件名> 指定同步某个组件，如果组件被修改过，则给出提示
+  * `mx gallery -l` 列出本地所有组件的相关信息
 
 ### mx daily
 
@@ -76,6 +76,12 @@ magix3 组件相关命令，同步组件到本地项目中，支持配置多组�
 
 与[chartpark](https://chartpark.alibaba-inc.com)平台联动的专属命令，需要你在chartpark平台创建好项目后，配置项目id到`magixCliConfig.chartParkId`里，然后平台操作添加图表等并打包完后(请选择CDN打包)，执行 `mx chartpark` 将 chartpark 平台打包生成的完整图表文件及配置同步到本地项目中，免去了在项目中频繁调试图表效果的繁琐操作
 
+### mx iconfont
+
+与[iconfont](https://www.iconfont.cn)平台联动的专属命令。
+* `mx iconfont` 在iconfont平台上生成新的icon时，本地执行本命令即可同步最新的iconfont配置到项目中
+* `mx iconfont --check` 检测iconfont平台有没有本地项目中没有引用到的失效icon
+ 
 ### mx check
 
 调用magix-combine检测项目代码是否正确
