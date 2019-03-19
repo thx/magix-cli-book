@@ -29,6 +29,9 @@
       "globalCss": [ //设置magix-combine指定global全局样式
           "./src/app/gallery/mx-style/index.less"
       ],
+      "magixLoaderType": "cmd", //magix-combine编译文件时的模块类型
+      "magixJsTranspile": "", //magix-combine编译js文件到目标语言格式，"ES3" (default), "ES5", "ES6"/"ES2015", "ES2016", "ES2017" or "ESNext".
+      "rootAppName", "app", //请填写app唯一标识，防止上线的时候样式名压缩与全局样式冲突
       "devCommand": "mat rap", // 自定义mx dev时启动的本地RAP服务，一般不需要配置，cli工具内置了
       "proxyCommand": "mat proxy", //自定义mx dev时启动的反向代理接口服务，一般不需要配置，cli工具内置了
       "dynamicProjectName": true, //指定加载的包名是否是动态的，在跨项目加载view时需要设置为true
@@ -76,7 +79,9 @@
         "name": "magix-gallery@1.3.10", //组件库名称，可以@指定组件库版本
         "path": "src/app/gallery", //组件同步到项目中的路径
         "ignoreFiles": "mx-style/_vars_override.less" //可配置忽略修改校验提示的文件，通常是用于在项目中覆盖组件样式的文件
-      }]
+      }],
+      "galleriesMxRoot": "app/gallery", //本地通用组件的路径
+      "galleriesLgRoot": "app/gallery-locl", //本地组件的路径
 
       //周边相关项目id
       "defId": "2233", //DEF云构建的项目id
