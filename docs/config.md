@@ -32,6 +32,16 @@
       "magixLoaderType": "cmd", //magix-combine编译文件时的模块类型
       "magixJsTranspile": "", //magix-combine编译js文件到目标语言格式，"ES3" (default), "ES5", "ES6"/"ES2015", "ES2016", "ES2017" or "ESNext".
       "rootAppName", "app", //请填写app唯一标识，防止上线的时候样式名压缩与全局样式冲突
+      "HMRWatchFiles": [
+          'src/**/*.js',
+          'src/**/*.ts',
+          'src/**/*.es',
+          'src/**/*.mx',
+          'src/**/*.css',
+          'src/**/*.html',
+          'src/**/*.scss',
+          'src/**/*.less'
+      ], //HMR热更新所监听的文件
       "devCommand": "mat rap", // 自定义mx dev时启动的本地RAP服务，一般不需要配置，cli工具内置了
       "proxyCommand": "mat proxy", //自定义mx dev时启动的反向代理接口服务，一般不需要配置，cli工具内置了
       "dynamicProjectName": true, //指定加载的包名是否是动态的，在跨项目加载view时需要设置为true
