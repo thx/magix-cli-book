@@ -5,6 +5,15 @@
 
 初始化项目
 
+### mx createDaily
+
+`master`分支下执行，可快捷创建开发分支，避免多人开发时冲突 (推荐使用时间戳格式)
+
+![createDaily](https://img.alicdn.com/tfs/TB1SqXAQrvpK1RjSZPiXXbmwXXa-1094-252.jpg)
+
+> DEF云构建已支持语义化分支名称，不再限于daily/x.x.x形式，详见 https://work.def.alibaba-inc.com/doc/branch_name
+
+
 ### mx dev
 
 运行mat本地服务器，会自动打开浏览器，访问默认端口为1234的localhost
@@ -60,16 +69,16 @@ magix3 组件相关命令，同步组件到本地项目中，支持配置多组�
 
 ### mx daily
 
-一键发布当前daily分支（包含项目build，代码git pull/merge等，daily分支可复用），并可实时查看发布结果 [powerd by [alimama-deploy](http://gitlab.alibaba-inc.com/thx/alimama-deploy)]
+一键发布当前开发分支到日常环境（包含项目build，代码git pull/merge等，daily分支可复用），并可实时查看发布结果 [powerd by [alimama-deploy](http://gitlab.alibaba-inc.com/thx/alimama-deploy)]
 
 > 现已接入云构建，详细配置见 [云构建](/cloudBuild)
 
 
 ### mx publish
 
-一键发布到cdn正式环境，请在master分支下执行（所以这代表你已经先将开发daily分支合并到你的master了）[powerd by [alimama-deploy](http://gitlab.alibaba-inc.com/thx/alimama-deploy)]
+一键将当前开发分支发布到cdn正式环境 [powerd by [alimama-deploy](http://gitlab.alibaba-inc.com/thx/alimama-deploy)]
 
-> 注意：如果配置了`publishDaily: true`，则该命令必须在daily分支下执行，会直接将当前daily分支发布掉
+> 注意：`mx publish`现在需要在你的日常分支上执行，会直接将当前分支发布掉
 
 
 ### mx chartpark

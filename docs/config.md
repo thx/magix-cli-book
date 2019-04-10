@@ -59,7 +59,6 @@
       "srcFolder": "src", //项目源文件目录
       "buildFolder": "build" //项目编译打包目标目录
       "buildCommand": "gulp build", //自定义mx daily/publish要执行的项目构建任务名，一般不需要配置，cli工具内置了构建任务
-      "publishDaily": false, //默认mx publish只能在master下执行，配置为true可直接将当前daily分支发布掉,
       "cloudBuild": true //是否云构建，为true时需要移除buildCommand配置
       "internationalCdn": true //是否同时发布到国际版cdn环境，域名前缀为https://b.alicdn.com/g/
 
