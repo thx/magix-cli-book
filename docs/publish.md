@@ -14,7 +14,7 @@
 
 ### 完善后的新流程
 
-1. master下执行 `mm createDaily` ，填写完问答后，自动创建语义化分支 (如`feat-project2/20190410.200637.151`)
+1. master下执行 `mm createDaily` ，填写完问答后，自动创建语义化分支 (如`feat-project2/20190410.200637.151`，不能使用中文名)
 
 ![createDaily](https://img.alicdn.com/tfs/TB1SqXAQrvpK1RjSZPiXXbmwXXa-1094-252.jpg)
 > DEF云构建已支持语义化分支名称，不再限于daily/x.x.x形式，详见 https://work.def.alibaba-inc.com/doc/branch_name
