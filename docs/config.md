@@ -100,6 +100,9 @@
 
       //magix-desiger配置
       "magixDesigerTemplate": "@ali/magix-desiger-bptemplate", //magix-desiger工具所依赖的模板
+
+      //启用rapper，会在mm models时执行rapper脚本
+      "rapper": true,
       
       //项目的额外gulp任务脚本说明列表，可通过mmr [脚本]运行
       "scriptsInfo": { 
