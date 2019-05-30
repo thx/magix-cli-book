@@ -1,7 +1,10 @@
 
-### 什么是rapper
+### 什么是Rapper 
 
-Rapper 是 Rap 的最佳伴侣，可以根据 Rap 上的接口信息直接生成出接口的 typescript 定义和请求函数。简单来说就是在写代码的时候，可以帮你直接提示接口的入参及返回数据格式（`前提是编辑器是vscode`）
+
+Rapper 是 Rap 的最佳伴侣，可以根据 Rap 上的接口信息直接生成出接口的 typescript 定义和请求函数。简单来说就是在写接口请求的时候，可以帮你直接提示接口的入参及返回数据格式 `(Rapper作者：@池冰)`
+
+
 
 __看下使用效果：__
 
@@ -28,16 +31,18 @@ __老项目__：
 3. 最后执行 `mx models` 即可开始使用rapper
 
 
-### 注意事项
+### 使用方式
 
 1. 使用rapper提示的必须为.ts文件
 
 2. view的引用方式需要改成import
 
-![img](https://img.alicdn.com/tfs/TB1cYs1aMaH3KVjSZFpXXbhKpXa-468-154.jpg)
+    ![img](https://img.alicdn.com/tfs/TB1cYs1aMaH3KVjSZFpXXbhKpXa-468-154.jpg)
 
-3. 代码示例
+3. 使用`this.requester.<your_model_name>` 替换原先的 `this.fetch`
 
-![img](https://img.alicdn.com/tfs/TB1xCc1aMaH3KVjSZFpXXbhKpXa-794-340.jpg)
+    __代码示例__
+
+    ![img](https://img.alicdn.com/tfs/TB1xCc1aMaH3KVjSZFpXXbhKpXa-794-340.jpg)
 
 
