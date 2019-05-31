@@ -32,4 +32,4 @@ magix应用可视化搭建工具 magix desiger
      
      ![](https://img.alicdn.com/tfs/TB1DHP6tCzqK1RjSZPcXXbTepXa-1894-869.gif)
 
-     [更多信息](http://gitlab.alibaba-inc.com/thx/magix-desiger) or @宫卫
+     [更多信息](http://gitlab.alibaba-inc.com/thx/magix-desiger) or `@宫卫`
