@@ -32,6 +32,8 @@ __老项目__：
 
 3. 最后执行 `mx models` 即可开始使用rapper
 
+    > 注意：`src/[你的项目名]/services/`目录下的 `model-itf.ts`、`models.ts`、`requester.ts` 这三个文件由`mx models`命令读取RAP2平台的数据自动生成，请勿手动更改
+
 
 ### 使用方式
 
