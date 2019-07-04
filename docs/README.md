@@ -25,17 +25,23 @@
 
     mx init
 
-详细步骤：
+##### 详细步骤：
+1. 输入域账号/密码登录gitlab(只在首次使用时登录)
+2. 选择脚手架类型
+3. 选择你的项目要创建在哪个groups下(gitlab)
+4. 输入项目名称 (会以该名称在gitlab平台上创建仓库，并在当前目录下创建以项目名称为名的文件夹)
 
-  * 输入域账号/密码登录gitlab(只在首次使用时登录)
-  * 选择脚手架类型
-  * 选择你的项目要创建在哪个groups下(gitlab)
-  * 输入项目名称 (会以该名称在gitlab平台上创建仓库，并在当前目录下创建以项目名称为名的文件夹)
+![mx init](https://img.alicdn.com/tfs/TB1SuCprDtYBeNjy1XdXXXXyVXa-1436-1226.gif)
 
-> init流程：系统到gitlab平台上创建好项目，然后自动从相应类型的脚手架仓库`clone`代码到你的本地，并且设置`git remote`为gitlab的仓库地址，然后`tnpm install`所有的依赖包，同时执行`mx gallery`同步magix组件到本地，以及执行`mx models`同步RAP上的接口到本地项目中
+现在 `mx init` 已经接入以下各平台：
+* [gitlab](https://gitlab.alibaba-inc.com/)
+* [RAP](https://rap2.alibaba-inc.com/)
+* [DEF云构建平台](https://work.def.alibaba-inc.com/my)
+* [iconfont](https://www.iconfont.cn/)
+* [chartpark](https://chartpark.alibaba-inc.com/)
+* [数据小站](https://data.alimama.net/)
 
-  ![mx init](https://img.alicdn.com/tfs/TB1SuCprDtYBeNjy1XdXXXXyVXa-1436-1226.gif)
-
+会在初始化项目时同步在各平台自动创建好关联项目，并配置到项目中，无需手动操作
 
 ### 目前支持的脚手架类型
   1. [后台管理脚手架](http://gitlab.alibaba-inc.com/mm/zs_scaffold)
