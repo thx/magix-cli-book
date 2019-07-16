@@ -36,6 +36,8 @@ mat.url(apiPatterns)
 ![](https://img.alicdn.com/tfs/TB1FQzJCkvoK1RjSZPfXXXPKFXa-1552-184.png)
 同时别忘了清除缓存
 
+> HOST切换不生效问题：https://www.cnblogs.com/hustskyking/p/hosts-modify.html
+
 ### 快捷进入https接口模式
 
 现在支持在命令行中增加`--https`参数来直接启用https接口模式，例如: `sudo mx dev -d --https` 
