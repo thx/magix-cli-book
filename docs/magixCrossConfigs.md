@@ -74,9 +74,9 @@ bootConfig.crossConfigs.forEach(config => {
 
 ![a](https://img.alicdn.com/tfs/TB1vj5Ibhz1gK0jSZSgXXavwpXa-1642-1200.jpg)
 
-同时提供全局禁用插件效果的功能
+同时提供全局禁用插件，以及一键清除所有站点的跨项目加载view的配置信息
 
-![b](https://img.alicdn.com/tfs/TB1TX9LbbY1gK0jSZTEXXXDQVXa-584-456.jpg)
+![b](https://img.alicdn.com/tfs/TB1r_rRboT1gK0jSZFrXXcNCXXa-988-610.png)
 
 ### 使用人群
 测试及产品们
