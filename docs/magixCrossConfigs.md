@@ -65,8 +65,6 @@ bootConfig.crossConfigs.forEach(config => {
     Magix.config({
         [config.apiHostKey]: config.apiHost
     })
-
-    prepareModules.push(`${config.projectName}/prepare`)
 })
 ```
 
