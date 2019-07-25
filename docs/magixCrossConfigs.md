@@ -11,12 +11,14 @@
 ### 背景
 目前跨项目加载view的项目，关联的子项目版本及接口host都配置在diamond上，导致单一项目的前端配置过多，后端容易配错，所以我们将所有关联子项目的前端资源地址以及host配置全部收敛进前端代码里进行配置，然后测试和产品们通过安装本插件，可以在预发或线上环境随意指定子项目的前端资源地址及host配置
 
+> 出于对测试或产品使用本插件的难度考虑，维持子项目apiHost由后端根据环境直接输出，然后前端变量形式配置到boot-config.js里，保持原来的测试逻辑，插件只提供特殊情况下的配置需求
+
 ### 前端改造点
 
 > 可以参考 dmp-new 项目的boot.ts文件进行修改
 
 具体步骤：
-1. 去掉index.html入口文件里除了当前项目版本外的其他所有子项目版本及host配置
+1. 去掉index.html入口文件里除了当前项目版本外的其他所有子项目版本配置，后端输出的子项目apiHost可以保留
 2. 在`boot.ts`文件旁边创建`boot-config.ts`文件，配置如下：
 ```javascript
 //#loader=none;
@@ -39,6 +41,29 @@ define("boot-config", () => {
     };
 });
 ```
+如果apiHost是由后端输出，定义在window下的环境变量里，则`boot-config.js`里可以使用变量形式，如：
+```javascript
+//#loader=none;
+define("boot-config", () => {
+    let tacticsApiHost = ENV.tacticsApiHost
+    let cdnHost = window._cdnHost //cdnHost由主项目决定
+    return {
+        crossConfigs: [{
+            projectName: 'dmp-xiaoer',
+            source: `${cdnHost}/mm/dmp-xiaoer/20190628.151909.437/dmp-xiaoer`,
+            apiHostKey: 'dmp-xiaoer.api.host',
+            apiHost: ''
+        }, {
+            projectName: 'tactics',
+            source: `${cdnHost}/mm/tactics/20190712.110549.440/tactics`,
+            apiHostKey: 'tactics.api.host',
+            apiHost: tacticsApiHost
+        }]
+    };
+});
+```
+
+
 3. 然后`boot.ts`里将`boot-config.ts`引入 
 ```javascript
 seajs.use(['boot-config'], (bootConfig) => {...}
@@ -47,7 +72,6 @@ seajs.use(['boot-config'], (bootConfig) => {...}
 4. 配置好seajs的path
 ```javascript
 //从bootConfig里配置关联子项目的包配置
-bootConfig.crossConfigs = bootConfig.crossConfigs || []
 bootConfig.crossConfigs.forEach(config => {
     seajsConfig.paths[config.projectName] = config.source
 })
