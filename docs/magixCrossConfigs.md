@@ -103,5 +103,8 @@ bootConfig.crossConfigs.forEach(config => {
 ![b](https://img.alicdn.com/tfs/TB1r_rRboT1gK0jSZFrXXcNCXXa-988-610.png)
 
 ### 使用人群
-测试及产品们
+测试：
 > 以后测试要测什么版本，什么host自己动手配置吧，解放前端！
+
+前端开发：
+> 本地同时起两个项目服务时，可以通过插件配置子项目的资源地址为localhost、接口为RAP地址等，无须修改boot-config.ts里的配置，防止忘记还原配置发布到线上。
