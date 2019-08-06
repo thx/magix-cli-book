@@ -103,6 +103,9 @@
 
       //启用rapper，会在mm models时执行rapper脚本
       "rapper": true,
+
+      //允许mm init结束后执行自定义的命令，进行一些额外的操作
+      "initCompleted": "node test",
       
       //项目的额外gulp任务脚本说明列表，可通过mmr [脚本]运行
       "scriptsInfo": { 
