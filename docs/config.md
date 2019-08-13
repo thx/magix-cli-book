@@ -105,7 +105,10 @@
       "rapper": true,
 
       //允许mm init结束后执行自定义的命令，进行一些额外的操作
-      "initCompleted": "node test",
+      "initCompleted": "gulp dosomething",
+
+      //允许mm createDaily结束后执行自定义的命令，进行一些额外的操作
+      "createDailyHook": "gulp dosomething",
       
       //项目的额外gulp任务脚本说明列表，可通过mmr [脚本]运行
       "scriptsInfo": { 
