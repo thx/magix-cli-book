@@ -18,7 +18,6 @@
         "日常": "11.163.168.1"
       }, 
       "protocolAlias": "http", //可以指定反向代理接口的协议，有些预发环境限制接口只能是https访问，可以通过命令行参数--https直接启用
-      "galleriesMxRoot": "app/gallery/", //组件的目录
       "timeout": 10000, //设置本地服务的请求响应时间，单位ms
       "autoOpenUrl": "http://localhost", //设置 mm dev后自动打开的页面地址
       "apiMatch": [ //设置对接RAP或反向代理的接口的规则
