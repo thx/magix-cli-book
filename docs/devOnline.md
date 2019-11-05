@@ -57,3 +57,4 @@ ipconfig增加域名配置(以逗号分隔)，配置如下图：
 
 现在`mm dev`时如果检测到ipconfig里配置了域名信息，则会自动往系统hosts里配置 `127.0.0.1 xxx.com` 信息，不再需要手动配置hosts，随后会执行 `mm clear` 清除dns及hsts，最后再自动打开浏览器访问该域名 
 
+
