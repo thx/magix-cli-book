@@ -12,10 +12,10 @@
       //项目开发相关
       "matPort": "8888", //本地起的开发服务器的端口
       "matProxyPass": "140.205.173.181", //反向代理的ip, mx dev -d时默认用到的ip
-      "ipConfig": { //mx dev -d 时提供可选的反向代理ip列表，有该值则覆盖matProxyPass配置
-        "预发一套": "140.205.173.181",
-        "预发二套": "140.205.173.180", 
-        "日常": "11.163.168.1"
+      "ipConfig": { //mx dev -d 时提供可选的反向代理ip列表，有该值则覆盖matProxyPass配置，增加ip对应的域名配置，自动配置host
+        "预发": "140.205.215.168,pre-dmp.taobao.com",
+        "线上": "106.11.211.220,dmp.taobao.com", 
+        "日常": "11.163.168.1,daily-dmp.taobao.net"
       }, 
       "protocolAlias": "http", //可以指定反向代理接口的协议，有些预发环境限制接口只能是https访问，可以通过命令行参数--https直接启用
       "timeout": 10000, //设置本地服务的请求响应时间，单位ms

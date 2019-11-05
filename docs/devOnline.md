@@ -47,3 +47,13 @@ mat.url(apiPatterns)
 1. 对于本地起https服务，需要本地生成自颁发证书，并认证通过，过程很繁琐，例如这个[教程](https://segmentfault.com/a/1190000007990972)
 
 2. 以上实现已经可以满足本地开发联调线上真实接口的场景了，在现实开发过程中，只需要切换`magixCliConfig`的配置`"protocolAlias": "http|https"`即可
+
+
+### ipconfig自动配置host
+
+ipconfig增加域名配置(以逗号分隔)，配置如下图：
+
+<img src="https://img.alicdn.com/tfs/TB1jMHwlRv0gK0jSZKbXXbK2FXa-1006-338.png" width="66%">
+
+现在`mm dev`时如果检测到ipconfig里配置了域名信息，则会自动往系统hosts里配置 `127.0.0.1 xxx.com` 信息，不再需要手动配置hosts，随后会执行 `mm clear` 清除dns及hsts，最后再自动打开浏览器访问该域名 
+
