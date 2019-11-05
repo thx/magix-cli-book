@@ -11,13 +11,13 @@
 #### 申请 spma 字段
 登录阿里日志平台-SPM申请 http://spm.alibaba-inc.com/track/index.htm?#/apply/spmapply ， 点击 `新建站点`，填完相关信息保存可以看到生成的`spma`字段，如下图 
 
-![img](https://img.alicdn.com/tfs/TB1ECsdvBjTBKNjSZFDXXbVgVXa-1274-426.png)
+<img src="https://img.alicdn.com/tfs/TB1ECsdvBjTBKNjSZFDXXbVgVXa-1274-426.png" width="80%">
 
 
 #### 申请 logkey 字段
 进入阿里日志平台-黄金令箭 http://spm.alibaba-inc.com/track/index.htm?#/apply/gold ，按顺序执行 `新建业务 -> 新建场景 -> 新建令箭`，完成后在列表里点击 `生成代码`，查看黄金令箭编码，去掉`/`即为`logkey`
 
-![img](https://img.alicdn.com/tfs/TB162QCvpooBKNjSZFPXXXa2XXa-1032-510.png)
+<img src="https://img.alicdn.com/tfs/TB162QCvpooBKNjSZFPXXXa2XXa-1032-510.png"  width="70%">
 
 
 #### 数据小站配置

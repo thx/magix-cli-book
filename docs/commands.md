@@ -9,7 +9,7 @@
 
 `master`分支下执行，可快捷创建开发分支，避免多人开发时冲突 (推荐使用时间戳格式)
 
-![createDaily](https://img.alicdn.com/tfs/TB1SqXAQrvpK1RjSZPiXXbmwXXa-1094-252.jpg)
+<img src="https://img.alicdn.com/tfs/TB1SqXAQrvpK1RjSZPiXXbmwXXa-1094-252.jpg" width="70%">
 
 > DEF云构建已支持语义化分支名称，不再限于daily/x.x.x形式，详见 https://work.def.alibaba-inc.com/doc/branch_name
 

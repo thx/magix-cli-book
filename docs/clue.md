@@ -42,7 +42,7 @@ tracker.logError(e, {
     code: 11
 });
 ```
-![img](https://img.alicdn.com/tfs/TB1I1NEmPTpK1RjSZKPXXa3UpXa-1212-1082.png)
+<img src="https://img.alicdn.com/tfs/TB1I1NEmPTpK1RjSZKPXXa3UpXa-1212-1082.png" width="70%">
 ##### magix1 or magix2版本
 开发者要接入clue，要做4件事
 
@@ -80,4 +80,5 @@ execError: function (e) {
     });
 }
 ```
-![img](https://img.alicdn.com/tfs/TB1qd42mMHqK1RjSZFkXXX.WFXa-1346-972.png)
+
+<img src="https://img.alicdn.com/tfs/TB1qd42mMHqK1RjSZFkXXX.WFXa-1346-972.png" width="70%">

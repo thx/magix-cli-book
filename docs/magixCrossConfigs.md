@@ -96,11 +96,12 @@ bootConfig.crossConfigs.forEach(config => {
 
 插件安装完成后，只要访问带有`boot-config.js`文件的站点，就会出现配置按钮，如下图：
 
-![a](https://img.alicdn.com/tfs/TB1vj5Ibhz1gK0jSZSgXXavwpXa-1642-1200.jpg)
+<img src="https://img.alicdn.com/tfs/TB1vj5Ibhz1gK0jSZSgXXavwpXa-1642-1200.jpg" width="100%">
 
 同时提供全局禁用插件，以及一键清除所有站点的跨项目加载view的配置信息
 
-![b](https://img.alicdn.com/tfs/TB1r_rRboT1gK0jSZFrXXcNCXXa-988-610.png)
+<img src="https://img.alicdn.com/tfs/TB1r_rRboT1gK0jSZFrXXcNCXXa-988-610.png" width="70%">
+
 
 ### 使用人群
 测试：
