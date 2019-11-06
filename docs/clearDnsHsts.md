@@ -8,7 +8,9 @@
 ### 原理
 利用applescript (详见`@宫卫`的[chrome_hosts_flush_util](https://github.com/gongeek/chrome_hosts_flush_util)) 模拟人为打开`chrome://net-internals/#hsts`配置页进行自动点击操作，运行过程中会自动打开chrome并跳转到配置页面清除缓存，最后自动关闭。
 
-此命令包含清除dns及hsts，dns无须配置，hsts需要配置指定的域名 (由 `mm clear --config [域名]` 命令配置)
+此命令包含清除dns及hsts，dns无须配置，hsts需要配置指定的域名 (由 `mm clear --config [域名]` 命令配置，支持多域名，以逗号分隔)，清除hsts配置的域名等同于原先 `chrome://net-internals/#hsts` 输入框里的域名，如下图：
+
+<img src="https://img.alicdn.com/tfs/TB1p_ZBlND1gK0jSZFyXXciOVXa-1560-194.png">
 
 
 
