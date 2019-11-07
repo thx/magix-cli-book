@@ -12,6 +12,8 @@
 
 <img src="https://img.alicdn.com/tfs/TB1p_ZBlND1gK0jSZFyXXciOVXa-1560-194.png">
 
+同时该命令也执行了删除用户目录下Chrome的Cache文件夹，以确保不会被缓存
+
 
 
 ### 准备工作
