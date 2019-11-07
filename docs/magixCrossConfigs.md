@@ -15,7 +15,7 @@
 
 ### 前端改造点
 
-> 可以参考 `http://gitlab.alibaba-inc.com/mm/dmp-new` 项目的boot.ts文件进行修改
+> 可以参考 `http://gitlab.alibaba-inc.com/mm/dmp-new/blob/master/src/boot.ts` 文件进行修改
 
 具体步骤：
 1. 去掉index.html入口文件里除了当前项目版本外的其他所有子项目版本配置，后端输出的子项目apiHost可以保留
