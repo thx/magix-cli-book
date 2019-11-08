@@ -31,7 +31,7 @@
 3. 选择你的项目要创建在哪个groups下(gitlab)
 4. 输入项目名称 (会以该名称在gitlab平台上创建仓库，并在当前目录下创建以项目名称为名的文件夹)
 
-![mx init](https://img.alicdn.com/tfs/TB1SuCprDtYBeNjy1XdXXXXyVXa-1436-1226.gif)
+![mx init](https://img.alicdn.com/tfs/TB111gpl7T2gK0jSZFkXXcIQFXa-1424-742.gif)
 
 现在 `mx init` 已经接入以下各平台：
 * [gitlab](https://gitlab.alibaba-inc.com/)
