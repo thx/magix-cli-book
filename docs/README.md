@@ -1,29 +1,20 @@
-### magix-cli
+### magix套件
 
+本套件是rmx-cli下的magix体系套件，请先安装rmx-cli (详见[rmx-cli](https://thx.github.io/rmx-cli-book))
 
-本命令行工具旨在基于脚手架快速创建magix项目，包括项目环境初始化，项目本地服务器运行（接口模拟基于[RAP](https://rap2.alibaba-inc.com)），项目一键云构建发布(基于[DEF](https://def.alibaba-inc.com))
-> 基本上您只需在终端执行`mx init`初始化项目，随后 `mx dev`即可投入开发
+### 安装
+安装rmx-cli完毕后，执行 `rmx install` 选择 `magix` 套件进行安装即可 (也可以直接进入项目根目录执行套件命令，会提示先安装套件)
 
 ------------
 
-### 工具架构总览
+### 套件架构总览
 [![magix-cli](https://img.alicdn.com/tfs/TB1os1SL9zqK1RjSZFHXXb3CpXa-2676-1104.jpg)](https://img.alicdn.com/tfs/TB1os1SL9zqK1RjSZFHXXb3CpXa-2676-1104.jpg)
 
 ----------
 
-### 使用方法
+### 套件使用方法
 
-#### 全局安装cli工具：
-
-    tnpm install -g @ali/magix-cli
-
-
-> 本工具依赖tnpm，请先安装tnpm： http://npm.alibaba-inc.com/profile
-
-
-#### 然后在你的工作目录执行：
-
-    mx init
+    rmx init magix
 
 ##### 详细步骤：
 1. 输入域账号/密码登录gitlab(只在首次使用时登录)
@@ -31,9 +22,9 @@
 3. 选择你的项目要创建在哪个groups下(gitlab)
 4. 输入项目名称 (会以该名称在gitlab平台上创建仓库，并在当前目录下创建以项目名称为名的文件夹)
 
-![mx init](https://img.alicdn.com/tfs/TB111gpl7T2gK0jSZFkXXcIQFXa-1424-742.gif)
+![rmx init](https://img.alicdn.com/tfs/TB111gpl7T2gK0jSZFkXXcIQFXa-1424-742.gif)
 
-现在 `mx init` 已经接入以下各平台：
+现在 `rmx init` 已经接入以下各平台：
 * [gitlab](https://gitlab.alibaba-inc.com/)
 * [RAP](https://rap2.alibaba-inc.com/)
 * [DEF云构建平台](https://work.def.alibaba-inc.com/my)
@@ -52,4 +43,3 @@
   6. [cell-lego-scaffold](http://gitlab.alibaba-inc.com/cell/cell-lego-scaffold)
 
 
-[semver](http://semver.org/)

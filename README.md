@@ -1,4 +1,4 @@
-### magix-cli文档托管仓库
+### magix套件文档托管仓库
 
 - 基于docsify，详见 [docsify](https://docsify.js.org/#/zh-cn/)
 - 安装docsify, `npm i -g docsify-cli`

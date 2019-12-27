@@ -3,7 +3,7 @@
 #### 配置说明
 项目根目录的package.json里提供了magixCliConfig来支持项目的自定义配置
 
->  mx init 初始化后的项目默认不需要修改magixCliConfig配置，开箱即用
+>  rmx init magix 初始化后的项目默认不需要修改magixCliConfig配置，开箱即用
 
 以下是`package.json`中的magixCliConfig的全量配置:
 
