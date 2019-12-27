@@ -8,7 +8,7 @@
 ------------
 
 ### 套件架构总览
-[![magix-cli](https://img.alicdn.com/tfs/TB1os1SL9zqK1RjSZFHXXb3CpXa-2676-1104.jpg)](https://img.alicdn.com/tfs/TB1os1SL9zqK1RjSZFHXXb3CpXa-2676-1104.jpg)
+[![magix-cli](https://img.alicdn.com/tfs/TB1FREkrVY7gK0jSZKzXXaikpXa-2630-1168.png)](https://img.alicdn.com/tfs/TB1FREkrVY7gK0jSZKzXXaikpXa-2630-1168.png)
 
 ----------
 
