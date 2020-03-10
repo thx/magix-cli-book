@@ -1,7 +1,7 @@
 
 
 #### spm埋点及数据小站配置
-通过mx init脚手架创建的项目，已经内置了spm埋点的功能，开发者要做的是3件事
+通过 `rmx init magix` 脚手架创建的项目，已经内置了spm埋点的功能，开发者要做的是3件事
 
 1. 申请`spma`字段
 2. 申请`logkey`字段
@@ -27,7 +27,7 @@
 
 #### 最后
 
-以上操作完后，将`spma` `logkey` 字段填到项目的`magixCliConfig`配置里，然后在开发完毕后执行 `mx spmlog` 即可完成全项目埋点，会遍历项目所有文件，给匹配到的节点打上`data-spm-click="..."`之类的标志
-> `mx spmlog` 会同时在本地生成dataplus数据小站相关的文件<br>
-> `mx spmlog -r` 可以清除项目的埋点
+以上操作完后，将`spma` `logkey` 字段填到项目的`magixCliConfig`配置里，然后在开发完毕后执行 `rmx spmlog` 即可完成全项目埋点，会遍历项目所有文件，给匹配到的节点打上`data-spm-click="..."`之类的标志
+> `rmx spmlog` 会同时在本地生成dataplus数据小站相关的文件<br>
+> `rmx spmlog -r` 可以清除项目的埋点
 

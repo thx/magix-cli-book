@@ -5,7 +5,10 @@
 
 初始化项目
 
-### rmx createDaily
+### rmx createDaily 
+
+> 快捷短命令：`rmx cd`
+
 
 `master`分支下执行，可快捷创建开发分支，避免多人开发时冲突 (推荐使用时间戳格式)
 
@@ -18,31 +21,30 @@
 
 运行mat本地服务器，会自动打开浏览器，访问默认端口为1234的localhost
 
-  * rmx dev 默认开启接口调用RAP平台返回模拟数据 (需要在package.json里配好RAP的项目id, `magixCliConfig.rapProjectId`)
+  * `rmx dev` 默认开启接口调用RAP平台返回模拟数据 (需要在package.json里配好RAP的项目id, `magixCliConfig.rapProjectId`)
   
-  * rmx dev -d 10.22.34.55 可以切换接口访问真实开发接口 (格式：-d [ip]，ip可以是daily或预发)
+  * `sudo rmx dev -d` 根据magixCliConfig.ipConfig列出可选择的预发或日常ip环境，开启本地服务联调真实接口，同时会设置域名应对的host配置，以及清除对应的hsts及dns缓存
 
-  > 如果magixCliConfig里配置好了ipConfig参数，则mx dev -d不用输入ip，会列出所有ipConfig配置下拉选择即可
+  > 更改系统host配置需要sudo权限
 
-  * rmx dev -p 7777 可以指定端口，如果指定80端口需sudo权限
+  * `sudo rmx dev -d --https` 支持本地起https服务，需要先安装自签名证书，详见[安装教程](http://gitlab.alibaba-inc.com/mmfs/ssl-cert)
+
+  * `rmx dev -p 7777` 可以指定端口，如果指定80端口需sudo权限
 
   * 本地开发时会进行当前开发环境的标识注入，方便一些情况下的环境判断（如对jsonp接口的特殊处理）：
-    - mm dev 全局注入标识 `window.__isRap__ = true`
-    - mm dev -d [ip] 全局注入标识 `window.__isDaily__ = true`
-    - mm dev -o [ip]全局注入标识 `window.__isOnline__ = true`
+    - `rmx dev` 全局注入标识 `window.__isRap__ = true`
+    - `rmx dev -d`  全局注入标识 `window.__isDaily__ = true`
+    - `rmx dev -o` 全局注入标识 `window.__isOnline__ = true`
 
-  * rmx dev --closeHmr 支持关闭热更新功能
-
-  * rmx dev 已加入magix-desiger工具，详见 [magix-desiger](http://gitlab.alibaba-inc.com/thx/magix-desiger)
-
-  * rmx dev 支持直接调试线上https真实接口环境，详见[调试线上https接口](/devOnline)
+  * `rmx dev` 已加入magix-desiger工具，详见 [magix-desiger](http://gitlab.alibaba-inc.com/thx/magix-desiger)
+  
 
 
 ### rmx models
 
-根据当前项目RAP的项目id，自动生成models.js接口集合文件，对于接口的一些特殊处理，可以在src/app/service/project.js文件中处理 (默认在mx init初始化项目时就会自动执行本命令)
+根据当前项目RAP的项目id，自动生成models.js接口集合文件，对于接口的一些特殊处理，可以在src/app/service/project.js文件中处理 (默认在rmx init初始化项目时就会自动执行本命令)
 
-  > 建议实行RAP接口与项目的强关联，不再在项目中维护models.js，新增接口都写在RAP上，然后执行mx models同步到本地，以保持项目接口的统一与可维护性
+  > 建议实行RAP接口与项目的强关联，不再在项目中维护models.js，新增接口都写在RAP上，然后执行rmx models同步到本地，以保持项目接口的统一与可维护性
 
 
 ### rmx add

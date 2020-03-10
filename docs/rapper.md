@@ -14,7 +14,7 @@ __看下使用效果：__
 
 ### 接入方式
 
-__新项目__：magix-cli已经内置Rapper，新项目初始完毕后，在Rap上填写接口，然后本地执行`mx models`，即可开始使用rapper接口提示功能
+__新项目__：magix-cli已经内置Rapper，新项目初始完毕后，在Rap上填写接口，然后本地执行`rmx models`，即可开始使用rapper接口提示功能
 
 
 
@@ -30,9 +30,9 @@ __老项目__：
     * `src/zs_scaffold/view.ts`
     * `src/zs_scaffold/services/base-fetch.ts`
 
-3. 最后执行 `mx models` 即可开始使用rapper
+3. 最后执行 `rmx models` 即可开始使用rapper
 
-    > 注意：`src/[你的项目名]/services/`目录下的 `model-itf.ts`、`models.ts`、`requester.ts` 这三个文件由`mx models`命令读取RAP2平台的数据自动生成，请勿手动更改
+    > 注意：`src/[你的项目名]/services/`目录下的 `model-itf.ts`、`models.ts`、`requester.ts` 这三个文件由`rmx models`命令读取RAP2平台的数据自动生成，请勿手动更改
 
 
 ### 使用方式
