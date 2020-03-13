@@ -47,7 +47,8 @@
       "proxyCommand": "mat proxy", //自定义rmx dev时启动的反向代理接口服务，一般不需要配置，cli工具内置了
       "dynamicProjectName": true, //指定加载的包名是否是动态的，在跨项目加载view时需要设置为true
       "jsExtension": ".es", //指定rmx add生成的js文件为.es格式，默认为.js
-      "dataLimit": "1mb", //post请求时参数大小的上限，格式为：'100kb', '1mb'等等，默认'10mb'
+      "dataLimit": "1mb", //post请求时参数大小的上限，格式为：'100kb', '1mb'等等，默认'10mb',
+      "magixCombineDebug": false, //本地开发时magix-combine编译默认为true。
 
       //RAP相关配置
       "rapVersion": "2", //指定使用rap1/rap2
