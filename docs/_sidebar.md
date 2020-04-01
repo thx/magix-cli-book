@@ -11,6 +11,7 @@
     * [接入rapper](rapper)
     * [跨项目加载view配置插件](magixCrossConfigs)
     * [一键清除chrome的dsn及hsts缓存](clearDnsHsts)
+    * [生成本地自签名的https证书](https)
 * 项目相关约定
 
     * [跨项目共享view](crossProjectView)
