@@ -2,5 +2,8 @@
     "name": "magix-cli-book",
     "version": "0.0.1",
     "author": "chongzhi",
-    "dependencies": {}
+    "dependencies": {},
+    "scripts": {
+        "commit": "git add -A; git commit -m 'dev'; git push origin master;"
+    }
 }
