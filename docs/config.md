@@ -49,6 +49,7 @@
       "jsExtension": ".es", //指定rmx add生成的js文件为.es格式，默认为.js
       "dataLimit": "1mb", //post请求时参数大小的上限，格式为：'100kb', '1mb'等等，默认'10mb',
       "magixCombineConfig": {}, //支持传入整个magix-combine的配置项，配置详见 https://github.com/thx/magix-combine/issues/17
+      "isPushState": false, //标识是否启动pushState模式
 
       //RAP相关配置
       "rapVersion": "2", //指定使用rap1/rap2
