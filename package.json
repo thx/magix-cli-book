@@ -4,6 +4,6 @@
     "author": "chongzhi",
     "dependencies": {},
     "scripts": {
-        "commit": "git add -A; git commit -m 'dev'; git push origin master;"
+        "c": "git add -A; git commit -m 'dev'; git push origin master;"
     }
 }
