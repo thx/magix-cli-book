@@ -73,6 +73,7 @@
       "spmFolder": "src/app/views", //rmx spmlog打点指定的文件夹，通常是view页面
       "spmCommand": "gulp spmlog", //自定义rmx spmlog打点执行的本地命令，一般不需要配置，cli工具内置了打点命令
       "spmPropertyMatch": ["to=\"", ":to=\""], //支持rmx spmlog自定义属性匹配规则
+      "noSpmlog": false, //配置rmx daily时是否自动执行埋点spmlog任务
 
       //chartPark相关配置
       "chartParkId": "1234", //rmx init会自动创建，无需填写
