@@ -57,6 +57,7 @@
       "disableRap": true, //禁掉命令里rap相关的功能
       "modelsPath": "src/app/services/models.js", //rmx models生成的本地models.js的文件路径
       "modelsTmpl": "./magix-cli-models-tmpl/models.js", //rmx models生成的models.js的文件模板
+      "supportApiPathParams": true, //为true的话完整保留:id类型的接口地址，service中通过pathMap对:id做替换
 
       //发布相关
       "srcFolder": "src", //项目源文件目录
