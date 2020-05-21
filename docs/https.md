@@ -2,12 +2,14 @@
 
 ### 生成https证书
 
-启动本地https服务需要先生成本地https证书，并导入系统，详细教程见：http://gitlab.alibaba-inc.com/mmfs/ssl-cert
+启动本地https服务需要先生成本地https证书，并导入系统，请使用 rmx 插件 `rmx cert`
+
+直接运行 `rmx cert --install` 按提示即可完成本地https证书安装，首次执行会提示安装套件。
 
 
 ### 使用方法
 
-执行 `sudo rmx dev -d --https` 带有--https标识时会启动本地https开发服务器，以应对某些场景下必须https服务的要求（如本地开发对接预发环境https接口，chrome的same-site限制等等）
+本地https证书安装完毕后执行 `sudo rmx dev -d --https` 带有--https标识时会启动本地https开发服务器，以应对某些场景下必须https服务的要求（如本地开发对接预发环境https接口，chrome的same-site限制等等）
 
 
 ---
