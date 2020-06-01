@@ -106,7 +106,11 @@
       "rapper": true,
 
       //允许rmx init结束后执行自定义的命令，进行一些额外的操作
-      "initCompleted": "gulp dosomething"
+      "initCompleted": "gulp dosomething",
+
+      //允许rmx daily/publish 结束后执行自定义的命令，进行一些额外的操作
+      "dailyCompleted": "gulp dosomething",
+      "publishCompleted": "gulp dosomething"
     }
 
 
