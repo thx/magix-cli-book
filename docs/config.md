@@ -117,7 +117,9 @@
 
       //允许rmx daily/publish 结束后执行自定义的命令，进行一些额外的操作
       "dailyCompleted": "gulp dosomething",
-      "publishCompleted": "gulp dosomething"
+      "publishCompleted": "gulp dosomething",
+
+      "koaCorsConfig": {} // koa-cors跨域配置，详见：https://github.com/koajs/cors
     }
 
 
