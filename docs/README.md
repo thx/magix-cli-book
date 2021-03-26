@@ -1,9 +1,9 @@
 ### magix套件
 
-本套件是rmx-cli下的magix体系套件，请先安装rmx-cli (详见[rmx-cli](https://thx.github.io/rmx-cli-book))
+本套件是mm-cli下的magix体系套件，请先安装mm-cli (详见[mm-cli](https://thx.github.io/rmx-cli-book))
 
 ### 安装
-安装rmx-cli完毕后，执行 `rmx install` 选择 `magix` 套件进行安装即可 (也可以直接进入项目根目录执行套件命令，会提示先安装套件)
+安装mm-cli完毕后，执行 `mm install` 选择 `magix` 套件进行安装即可 (也可以直接进入项目根目录执行套件命令，会提示先安装套件)
 
 ------------
 
@@ -14,7 +14,7 @@
 
 ### 初始化套件脚手架
 
-    rmx init magix
+    mm init magix
 
 ##### 详细步骤：
 1. 输入域账号/密码登录gitlab(只在首次使用时登录)
@@ -22,9 +22,9 @@
 3. 选择你的项目要创建在哪个groups下(gitlab)
 4. 输入项目名称 (会以该名称在gitlab平台上创建仓库，并在当前目录下创建以项目名称为名的文件夹)
 
-![rmx init](https://img.alicdn.com/tfs/TB111gpl7T2gK0jSZFkXXcIQFXa-1424-742.gif)
+![mm init](https://img.alicdn.com/tfs/TB111gpl7T2gK0jSZFkXXcIQFXa-1424-742.gif)
 
-现在 `rmx init` 已经接入以下各平台：
+现在 `mm init` 已经接入以下各平台：
 * [gitlab](https://gitlab.alibaba-inc.com/)
 * [RAP](https://rap2.alibaba-inc.com/)
 * [DEF云构建平台](https://work.def.alibaba-inc.com/my)

@@ -1,8 +1,8 @@
 
-> 以下教程适用于老项目或未接入magix-cli工具的项目，新 `rmx init magix` 生成的项目默认已经接入了云构建，只须做`准备工作`即可
+> 以下教程适用于老项目或未接入magix-cli工具的项目，新 `mm init magix` 生成的项目默认已经接入了云构建，只须做`准备工作`即可
 
 ### 准备工作
-- 升级magix-cli工具到最新版本 `tnpm install -g @ali/magix-cli`
+- 升级mm-cli工具到最新版本 `tnpm install -g @ali/mm-cli`
 - 项目的package.json里的magixCliConfig增加配置 `"cloudBuild": true`
 - 仓库接入云构建平台，请先登录平台[DEF](http://engine.def.alibaba-inc.com/my#/project)，点击接入新仓库，输入你的项目git地址根据提示操作
 
@@ -11,7 +11,7 @@
 
 由于历史原因目前项目一般分为两种情况
 
-1. 最近新 `rmx init magix` 初始化成功的Magix3项目（特征是项目中不再有`combine-tool-config.js`, `matfile.js`, `gulpfile.js`等文件，因为已经收敛进cli工具中了）
+1. 最近新 `mm init magix` 初始化成功的Magix3项目（特征是项目中不再有`combine-tool-config.js`, `matfile.js`, `gulpfile.js`等文件，因为已经收敛进cli工具中了）
 
 2. 以前的老项目
 
@@ -20,7 +20,7 @@
 
 ### 接入方法
 
-1. 对于符合 `rmx init magix` 脚手架的新项目我们使用`构建器`构建，在项目根目录下放置 `abc.json`文件，填充以下内容即可
+1. 对于符合 `mm init magix` 脚手架的新项目我们使用`构建器`构建，在项目根目录下放置 `abc.json`文件，填充以下内容即可
  ```
     {
         "assets": {
@@ -64,17 +64,17 @@
         }
     }
  ```
- > 此时 magixCliConfig 中需要配置 `"buildCommand": "gulp build"` 之类的本地构建逻辑，`rmx daily/publish` 时会先在本地执行该构建逻辑，然后再进行云构建发布
+ > 此时 magixCliConfig 中需要配置 `"buildCommand": "gulp build"` 之类的本地构建逻辑，`mm daily/publish` 时会先在本地执行该构建逻辑，然后再进行云构建发布
 
 
 ### 一切就绪
 
-配置完成后，就可以执行 `rmx daily/publish` 来进行云构建发布了
+配置完成后，就可以执行 `mm daily/publish` 来进行云构建发布了
 
-- `rmx daily`: 日常发布，在你的开发分支下执行，可以重复发布
-- `rmx publish`: 将你的当前开发分支发布到正式cdn环境，发布完毕后会删除当前开发分支，并checkout到master分支
+- `mm daily`: 日常发布，在你的开发分支下执行，可以重复发布
+- `mm publish`: 将你的当前开发分支发布到正式cdn环境，发布完毕后会删除当前开发分支，并checkout到master分支
 
-> 需要注意的是云构建自动接入门神校验系统，`rmx publish` 发正式cdn的时候，需要通过门神的校验才可以正常发布，校验结果可以查看仓库的检查日志
+> 需要注意的是云构建自动接入门神校验系统，`mm publish` 发正式cdn的时候，需要通过门神的校验才可以正常发布，校验结果可以查看仓库的检查日志
 
 ### 常见的门神校验错误
 
