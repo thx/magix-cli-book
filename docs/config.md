@@ -76,6 +76,7 @@
         "workId": "252254",
         "workName": "奇贤"
       }],
+      "preloadModuleList": true, // 是否开启发布时自动生成预加载模块清单
 
       //埋点数据相关配置
       "logkey": "m5", //黄金令箭的logkey，固定的值
