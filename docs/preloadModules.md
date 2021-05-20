@@ -10,13 +10,13 @@
       preloadModuleList: true
     }
 ```
-3. 执行 `mm daily`，会在自动项目根目录下生成 
+3. 执行 `mm daily`，会自动在项目根目录下生成以下文件
 ```
     preloadModule.ts //模块预加载主逻辑文件 
     preloadModuleList.ts //模块清单文件
 ```
    
-4. 随后在项目的 `boot.ts` 文件的 Magix.boot({...}) 代码后面加上下面这段代码 (参考：http://gitlab.alibaba-inc.com/mm/zs_scaffold/blob/master/src/boot.ts#L109)
+4. 随后在项目的 `boot.ts` 文件的 Magix.boot({...}) 代码后面加上以下这段代码 (参考：http://gitlab.alibaba-inc.com/mm/zs_scaffold/blob/master/src/boot.ts#L109)
 ```
     // 预加载静态资源
     seajs.use([`${projectName}/preloadModule`], (preload) => {
