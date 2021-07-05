@@ -69,13 +69,10 @@
       "buildCommand": "gulp build", //自定义mm daily/publish要执行的项目构建任务名，一般不需要配置，cli工具内置了构建任务
       "cloudBuild": true, //是否云构建，为true时需要移除buildCommand配置
       "internationalCdn": true, //是否同时发布到国际版cdn环境，域名前缀为https://b.alicdn.com/g/
-      "codeReviewers": [{ //mm publish时可选择的代码审阅人员列表
-        "workId": "71147",
-        "workName": "浩添"
-      }, {
-        "workId": "252254",
-        "workName": "奇贤"
-      }],
+      "codeReviewers": [ //mm publish时可选择的代码审阅人员列表
+        "71147|浩添",
+        "252254|奇贤"
+      ],
       "preloadModuleList": true, // 是否开启发布时自动生成预加载模块清单
 
       //埋点数据相关配置
