@@ -96,8 +96,7 @@
       //mm gallery相关配置
       "galleries": [{
         "name": "magix-gallery@1.3.10", //组件库名称，可以@指定组件库版本
-        "path": "src/app/gallery", //组件同步到项目中的路径
-        "ignoreFiles": "mx-style/_vars_override.less" //可配置忽略修改校验提示的文件，通常是用于在项目中覆盖组件样式的文件
+        "path": "src/app/gallery" //组件同步到项目中的路径
       }],
       "galleriesMxRoot": "app/gallery", //本地通用组件的路径
       "galleriesLgRoot": "app/gallery-locl", //本地组件的路径
