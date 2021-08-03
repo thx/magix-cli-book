@@ -31,7 +31,7 @@
           "./src/app/gallery/mx-style/index.less"
       ],
       "magixLoaderType": "cmd", //magix-combine编译文件时的模块类型
-      "magixJsTranspile": "", //magix-combine编译js文件到目标语言格式，"ES3" (default), "ES5", "ES6"/"ES2015", "ES2016", "ES2017" or "ESNext".
+      "magixJsTranspile": "ES2018", //magix-combine编译js文件到目标语言格式，"ES3", "ES5", "ES6"/"ES2015", "ES2016", "ES2017", "ES2018" (default) or "ESNext".
       "rootAppName": "app", //请填写app唯一标识，防止上线的时候样式名压缩与全局样式冲突
       "HMRWatchFiles": [
           "src/**/*.js",
@@ -74,6 +74,7 @@
         "252254|奇贤"
       ],
       "preloadModuleList": true, // 是否开启发布时自动生成预加载模块清单
+      "esBuildTarget": ["es2018"], // esbuild 的 target 配置
 
       //埋点数据相关配置
       "logkey": "m5", //黄金令箭的logkey，固定的值
