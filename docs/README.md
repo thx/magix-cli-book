@@ -1,14 +1,14 @@
 ### magix套件
 
-本套件是mm-cli下的magix体系套件，请先安装mm-cli (详见[mm-cli](https://thx.github.io/rmx-cli-book))
+本套件是 mm-cli 下的 magix 体系套件，请先安装 mm-cli (详见[mm-cli](https://thx.github.io/rmx-cli-book))
 
 ### 安装
-安装mm-cli完毕后，执行 `mm install` 选择 `magix` 套件进行安装即可 (也可以直接进入项目根目录执行套件命令，会提示先安装套件)
+安装 mm-cli 完毕后，执行 `mm install` 选择 `套件 > magix` 即可进行安装 (也可以直接进入项目根目录执行套件命令，会提示先安装套件)
 
 ------------
 
 ### 套件架构总览
-[![magix-cli](https://img.alicdn.com/tfs/TB1FREkrVY7gK0jSZKzXXaikpXa-2630-1168.png)](https://img.alicdn.com/tfs/TB1FREkrVY7gK0jSZKzXXaikpXa-2630-1168.png)
+[![magix-cli](https://img.alicdn.com/imgextra/i4/O1CN01fhZZfQ1D0ZguNsgAy_!!6000000000154-55-tps-1339-523.svg)](https://img.alicdn.com/imgextra/i4/O1CN01fhZZfQ1D0ZguNsgAy_!!6000000000154-55-tps-1339-523.svg)
 
 ----------
 

@@ -5,7 +5,12 @@
 
 >  `mm init magix` 初始化后的项目默认不需要修改magixCliConfig配置，开箱即用
 
-以下是`package.json`中的magixCliConfig的全量配置:
+*现在支持可视化配置了，本地开发 mm dev 时会注入开发帮助按钮，如下图：*
+
+[![magix-cli](https://img.alicdn.com/imgextra/i1/O1CN01E9m7yt22AgqMs3U6V_!!6000000007080-2-tps-1780-1602.png)](https://img.alicdn.com/imgextra/i1/O1CN01E9m7yt22AgqMs3U6V_!!6000000007080-2-tps-1780-1602.png)
+
+
+以下是`package.json`中的 magixCliConfig 的全量配置:
 
     "magixCliConfig": {
 
