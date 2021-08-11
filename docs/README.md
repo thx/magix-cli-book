@@ -1,45 +1,57 @@
-### magix套件
+#### 安装
+1. 安装 `tnpm` （如果已有 tnpm，请忽略）
+```
+npm install --registry=https://registry.npm.alibaba-inc.com -g tnpm
+```
 
-本套件是 mm-cli 下的 magix 体系套件，请先安装 mm-cli (详见[mm-cli](https://thx.github.io/rmx-cli-book))
+2. 用 tnpm 安装 `mm-cli` 命令行工具 
+```
+tnpm install -g @ali/mm-cli
+```
 
-### 安装
-安装 mm-cli 完毕后，执行 `mm install` 选择 `套件 > magix` 即可进行安装 (也可以直接进入项目根目录执行套件命令，会提示先安装套件)
+#### 基于 magix 套件脚手架初始化一个项目
+```
+mm init magix
+```
+> 首次使用 `mm-cli` 工具会提示域账号登录，按提示操作即可
 
-------------
+<img width="340" src="https://img.alicdn.com/imgextra/i2/O1CN01KZqyOY1vw8Z2TSaNc_!!6000000006236-2-tps-630-192.png">
 
-### 套件架构总览
-[![magix-cli](https://img.alicdn.com/imgextra/i4/O1CN01fhZZfQ1D0ZguNsgAy_!!6000000000154-55-tps-1339-523.svg)](https://img.alicdn.com/imgextra/i4/O1CN01fhZZfQ1D0ZguNsgAy_!!6000000000154-55-tps-1339-523.svg)
+接下来会提示安装 `magix` 套件，安装完毕后，选择脚手架（BP后台请选择 *zs_scaffold*），其他选择根据提示即可
 
-----------
+<img width="460" src="https://img.alicdn.com/imgextra/i4/O1CN01isQgwW1VmM61jRYd4_!!6000000002695-2-tps-884-456.png">
 
-### 初始化套件脚手架
-
-    mm init magix
-
-##### 详细步骤：
-1. 输入域账号/密码登录gitlab(只在首次使用时登录)
-2. 选择脚手架类型
-3. 选择你的项目要创建在哪个groups下(gitlab)
-4. 输入项目名称 (会以该名称在gitlab平台上创建仓库，并在当前目录下创建以项目名称为名的文件夹)
-
-![mm init](https://img.alicdn.com/tfs/TB111gpl7T2gK0jSZFkXXcIQFXa-1424-742.gif)
-
-现在 `mm init` 已经接入以下各平台：
-* [gitlab](https://gitlab.alibaba-inc.com/)
-* [RAP](https://rap2.alibaba-inc.com/)
-* [DEF云构建平台](https://work.def.alibaba-inc.com/my)
-* [iconfont](https://www.iconfont.cn/)
-* [chartpark](https://chartpark.alibaba-inc.com/)
-* [数据小站](https://data.alimama.net/)
-
-会在初始化项目时同步在各平台自动创建好关联项目，并配置到项目中，无需手动操作
-
-### 目前支持的脚手架类型
-  1. [后台管理脚手架](http://gitlab.alibaba-inc.com/mm/zs_scaffold)
-  2. [联盟后台脚手架](http://gitlab.alibaba-inc.com/mm/union_scaffold)
-  3. [cell-webpack-scaffold](http://gitlab.alibaba-inc.com/cell/cell-webpack-scaffold)
-  4. [cell-lib-scaffold](http://gitlab.alibaba-inc.com/cell/cell-lib-scaffold)
-  5. [cell-components-scaffold](http://gitlab.alibaba-inc.com/cell/cell-components-scaffold)
-  6. [cell-lego-scaffold](http://gitlab.alibaba-inc.com/cell/cell-lego-scaffold)
+项目初始化完毕后，进入项目目录执行 `mm dev` 即可开始开发
 
 
+#### 项目开发配置
+项目开发相关的配置在 package.json 的 `magixCliConfig` 对象里，默认配置一般不需要改，需要根据项目修改的配置有
+
+- `autoOpenUrl` 执行 mm dev（接口对接 RAP）时自动打开的浏览器地址
+```
+"autoOpenUrl": "https://localhost:1234/index.html"
+```
+- `ipConfig` 执行 mm dev -d（接口对接真实 IP）时可选的开发环境配置
+```
+"ipConfig": {
+    "预发": "140.205.215.168|https://pre-zuanshi.taobao.com:443/index.html",
+    "线上": "106.11.223.90|https://zuanshi.taobao.com:443/index.html"
+}
+```
+  **PS: 此处配置自动打开的完整的 url 地址隐含多重配置信息**
+  1. `https` 协议部分代表当前启动的本地开发服务是 https 或 http （首次启动 https 服务需要安装本地证书，请执行 `mm cert -install` 安装）
+  2. `pre-zuanshi.taobao.com` 域名部分会自动将 *127.0.0.1 [域名]* 写入系统 hosts，无须手动管理 hosts (该配置会在中止 mm dev 时自动从 系统hosts 里移除)
+  3. `:443` 端口部分代表当前启动的本地服务器的端口号
+  4. `/index.html` 该部分代表入口 html 文件
+
+一种更方便的修改项目配置的方式是 `mm dev` 启动开发服务后，通过页面上注入的 `Magix 开发帮助` 浮层进行配置管理
+
+<img width="650" style="box-shadow: 0 0 10px rgba(0,0,0,0.2)" src="https://img.alicdn.com/imgextra/i4/O1CN01US01CI1tZZp5qMFw9_!!6000000005916-2-tps-1462-1670.png">
+
+
+#### HMR 热更新
+项目默认开启 Magix 的 view 级别的模块热更新，如果你改的文件对应的 view 有在当前页面上渲染，则会触发 view 的热更新，否则全页刷新 
+
+#### 构建部署相关
+开发时请先执行 `mm createDaily` (短命令 `mm cd`，该命令是个插件，首次执行会提示安装) 创建带时间戳的日常分支，然后在日常分支上开发调试完毕，执行 `mm daily` 即可一键构建部署到预发环境，最后执行 `mm publish` 发布到生产环境
+> ps: `mm daily` 可以重复发布日常分支以方便测试验证，`mm publish` 发布后该分支会被删除
