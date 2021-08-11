@@ -39,7 +39,7 @@ mm init magix
 }
 ```
   **PS: 此处配置自动打开的完整的 url 地址隐含多重配置信息**
-  1. `https` 协议部分代表当前启动的本地开发服务是 https 或 http （首次启动 https 服务需要安装本地证书，请执行 `mm cert -install` 安装）
+  1. `https` 协议部分代表当前启动的本地开发服务是 https 或 http （首次启动 https 服务需要安装本地证书，请执行 `mm cert --install` 安装）
   2. `pre-zuanshi.taobao.com` 域名部分会自动将 *127.0.0.1 [域名]* 写入系统 hosts，无须手动管理 hosts (该配置会在中止 mm dev 时自动从 系统hosts 里移除)
   3. `:443` 端口部分代表当前启动的本地服务器的端口号
   4. `/index.html` 该部分代表入口 html 文件
