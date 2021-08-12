@@ -13,7 +13,8 @@ tnpm install -g @ali/mm-cli
 ```bash
 mm init magix
 ```
-> 首次使用 `mm-cli` 工具会提示域账号登录，按提示操作即可
+?>  首次使用 `mm-cli` 工具会提示域账号登录，按提示操作即可
+
 
 <img width="340" src="https://img.alicdn.com/imgextra/i2/O1CN01KZqyOY1vw8Z2TSaNc_!!6000000006236-2-tps-630-192.png">
 
@@ -38,7 +39,7 @@ mm init magix
     "线上": "106.11.223.90|https://zuanshi.taobao.com:443/index.html"
 }
 ```
-  **PS: 此处配置自动打开的完整的 url 地址隐含多重配置信息**
+  > **此处配置的完整 url 地址隐含多重配置信息**
   1. `https` 协议部分代表当前启动的本地开发服务是 https 或 http （首次启动 https 服务需要安装本地证书，请执行 `mm cert --install` 安装）
   2. `pre-zuanshi.taobao.com` 域名部分会自动将 *127.0.0.1 [域名]* 写入系统 hosts，无须手动管理 hosts (该配置会在中止 mm dev 时自动从 系统hosts 里移除)
   3. `:443` 端口部分代表当前启动的本地服务器的端口号
@@ -54,4 +55,5 @@ mm init magix
 
 #### 构建部署相关
 开发时请先执行 `mm createDaily` (短命令 `mm cd`，该命令是个插件，首次执行会提示安装) 创建带时间戳的日常分支，然后在日常分支上开发调试完毕，执行 `mm daily` 即可一键构建部署到预发环境，最后执行 `mm publish` 发布到生产环境
-> ps: `mm daily` 可以重复发布日常分支以方便测试验证，`mm publish` 发布后该分支会被删除
+
+> `mm daily` 可以重复发布日常分支以方便测试验证，`mm publish` 发布后该分支会被删除

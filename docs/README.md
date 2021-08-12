@@ -1,9 +1,8 @@
-#### magix 套件
+#### Magix 套件
 
-本套件是 mm-cli 下的 magix 体系套件，请先安装 mm-cli (详见[mm-cli](https://thx.github.io/rmx-cli-book))
+本套件是 [@ali/mm-cli](https://thx.github.io/rmx-cli-book) 命令行工具下的 Magix 体系套件，提供一整套基于 Magix 框架的从初始化项目、开发、联调、到构建部署的工程化能力。
 
-#### 安装套件
-安装 mm-cli 完毕后，执行 `mm install kit magix` 即可进行安装 (也可以直接进入项目根目录执行套件命令，会提示先安装套件)
+?> [快速开始](quickStart) 
 
 ------------
 
@@ -23,7 +22,7 @@
 * [数据小站](https://mamadata.alibaba-inc.com/)
 * [ARMS](https://clue.alibaba-inc.com/)
 
-*mm-cli 工具会在初始化项目时同步在各平台自动创建好关联项目，并配置到项目中，无需手动操作*
+> mm-cli 工具会在初始化项目时同步在各平台自动创建好关联项目，并配置到项目中，无需手动操作
 
 
 #### 目前支持的脚手架类型
