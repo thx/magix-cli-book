@@ -13,7 +13,7 @@ tnpm install -g @ali/mm-cli
 ```bash
 mm init magix
 ```
-?>  首次使用 `mm-cli` 工具会提示域账号登录，按提示操作即可
+!>  首次使用 `mm-cli` 工具会提示域账号登录，按提示操作即可
 
 
 <img width="340" src="https://img.alicdn.com/imgextra/i2/O1CN01KZqyOY1vw8Z2TSaNc_!!6000000006236-2-tps-630-192.png">
