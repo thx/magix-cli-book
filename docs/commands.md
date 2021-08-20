@@ -8,11 +8,11 @@
 ### mm dev
 
 本地开发命令
-  * `mm dev` 接口对接 RAP 平台模拟数据返回，会自动打开浏览器，依赖配置 *autoOpenUrl*，例：
+  * `mm dev` 接口对接 RAP 平台模拟数据返回，会自动打开浏览器，依赖配置 *autoOpenUrl*，示例：
     ```js
     "autoOpenUrl": "https://localhost:1234/index.html" 
     ```
-  * `mm dev -d` 接口对接真实环境，一般是在联调阶段，调用后端真实接口，本命令依赖 *ipConfig* 配置，例：
+  * `mm dev -d` 接口对接真实环境，一般是在联调阶段，调用后端真实接口，本命令依赖 *ipConfig* 配置（配置格式：`"[ip]|[url]"`），示例：
     ```js
     "ipConfig": {
       "预发": "140.205.215.168|https://pre-zuanshi.taobao.com:443/index.html",
