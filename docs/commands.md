@@ -7,7 +7,7 @@
 
 ### mm dev
 
-本地开发命令
+*本地开发命令*
   * `mm dev` 接口对接 RAP 平台模拟数据返回，会自动打开浏览器，依赖配置 *autoOpenUrl*，示例：
     ```js
     "autoOpenUrl": "https://localhost:1234/index.html" 
@@ -22,16 +22,23 @@
     
   !> 此处配置的完整 url 地址隐含多重配置信息，如下说明：
     * `https` 协议部分代表当前启动的本地开发服务是 https 或 http （首次启动 https 服务需要安装本地证书，请执行 `mm cert --install` 安装）
-    * `pre-zuanshi.taobao.com` 域名部分会自动将 *127.0.0.1 [域名]* 写入系统 hosts，无须手动管理 hosts (该配置会在中止 mm dev 时自动从 系统hosts 里移除)
+    * `pre-zuanshi.taobao.com` 域名部分会自动将 *127.0.0.1 [域名]* 写入系统 hosts，无须手动管理 hosts (该配置会在中止 mm dev 时自动从 系统 hosts 里移除)
     * `:443` 端口部分代表当前启动的本地服务器的端口号
     * `/index.html` 该部分代表入口 html 文件
-
-  * 其他可选参数
-    * `--https` 忽略配置，强制当前启动的服务为 https 服务
-    * `-p 8080` 忽略配置，指定当前服务的端口号
+  
   * 本地开发时会进行当前开发环境的标识注入，方便一些情况下的环境判断（如对jsonp接口的特殊处理）：
     * `mm dev` 全局注入标识 `window.__isRap__ = true`
     * `mm dev -d`  全局注入标识 `window.__isDaily__ = true`
+
+*其他可选参数：*
+
+  * `--https` 忽略配置，强制当前启动的服务为 https 服务
+  * `-p, --port <port>` 忽略配置，指定当前服务的端口号
+  * `--close-hmr` 关闭 HMR 热更新功能
+  * `--close-docs` 关闭帮助文档提示功能
+  * `--close-desiger` 关闭 magix-desiger 功能
+  * `--close-inspector` 关闭 magix-inspector 功能
+  * `--debug` 开启 debug 模式，会校验 rap 接口等
 
 
 ### mm add
