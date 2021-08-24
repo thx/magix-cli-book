@@ -10,6 +10,8 @@
     "dayjs": "^1.10.6"
   }
   ```
+  !> 请确保你引入的 npm 包是浏览器端可用的包，否则将报错
+
 2. `mm dev` 启动服务后，在你的业务代码中直接 `import` 包名即可使用，示例：
    ```js
    import Dayjs from 'dayjs'
