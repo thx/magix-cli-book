@@ -6,6 +6,7 @@
 
 * 相关文档
   * [对接 RAP 接口模拟](rap)
+  * [导入 npm 模块包](importModules)
   * [接入云构建](cloudBuild)
   * [新开发发布流程](publish)
   <!-- * [本地开发调试线上https接口](devOnline) -->

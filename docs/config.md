@@ -49,6 +49,7 @@
   "closeDocs": false, // 是否关闭开发帮助文档，默认为false
   "closeDesiger": false, // 是否关闭magix-desiger插件，默认为false
   "closeInspector": false, // 是否关闭magix-inspector插件，默认为false
+  "snowpackModulesDest": "src/dmp-new/web_modeuls", // dependencies 依赖的 npm 包在mm sync时同步到项目中的目录地址（默认值：src/[yourProjectName]/web_modules）
 
   //RAP相关配置
   "rapVersion": "2", //指定使用rap1/rap2
