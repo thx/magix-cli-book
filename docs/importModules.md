@@ -2,6 +2,7 @@
 现在 `Magix` 套件已支持直接在项目代码中 `import` npm 包的能力
 
 #### 使用步骤
+> 确保你的 `Magix` 套件已经更新到最新版本
 
 1. 配置 package.json 的 `dependencies` 依赖包或执行 `tnpm i [npm包] -S`，示例：
   ```json
@@ -23,5 +24,4 @@
     ...,
     "snowpackModulesDest": "src/dmp-new/web_modules"
   }
-  
 ```
