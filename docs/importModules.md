@@ -16,12 +16,14 @@
    ```
 
 #### 注意事项
-!> `mm dev` 或 `mm daily/publish` 时会自动同步 `dependencies` 依赖的包到项目中，包目录默认位于 `src/[yourProjectName]/web_modules` 下，请勿手动更改该目录下的文件
+?> `mm dev` 或 `mm daily/publish` 时会自动同步 `dependencies` 依赖的包到项目中，包目录默认位于 `src/[yourProjectName]/web_modules` 下，请勿手动更改该目录下的文件
 
-可更改默认同步到项目中的包目录地址，magixCliConfig 配置示例：
+支持更改默认同步到项目中的包目录地址，magixCliConfig 配置示例：
 ```json
   "magixCliConfig": {
     ...,
     "snowpackModulesDest": "src/dmp-new/web_modules"
   }
 ```
+
+!> 注意，如果你的项目需要被跨项目加载， `snowpackModulesDest` 包目录配置必须位于 `src/[yourProjectName]/xxx` 下，否则会加载不到模块
