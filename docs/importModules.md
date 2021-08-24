@@ -19,7 +19,9 @@
 
 #### 注意事项
 - 无法在 `boot.ts` 入口 js 文件里使用 `import` npm 包 （boot.ts 配置忽略了 magix-combine 的加载器处理）
-- `mm dev` 或 `mm daily/publish` 时会自动同步 `dependencies` 依赖的包到项目中 (基于 snowpack)，包目录默认位于 *src/[yourProjectName]/web_modules* 下，请勿手动更改该目录下的文件
+
+- `mm dev` 或 `mm daily/publish` 时会自动同步 `dependencies` 依赖的包到项目中 (内部由 snowpack 解析处理)，包目录默认位于 *src/[yourProjectName]/web_modules* 下，请勿手动更改该目录下的文件
+
 - 支持更改默认同步到项目中的包目录地址，magixCliConfig 配置示例：
 ```json
   "magixCliConfig": {
