@@ -26,7 +26,7 @@ mm init magix
 
 
 #### 项目开发配置
-项目开发相关的配置在 package.json 的 `magixCliConfig` 对象里，默认配置一般不需要改，需要根据项目修改的配置有
+项目开发相关的配置在 package.json 的 `magixCliConfig` 对象里（[查看全量配置](config)），默认配置一般不需要改，需要根据项目修改的配置有
 
 - `autoOpenUrl` 执行 mm dev（接口对接 [RAP](rap)）时自动打开的浏览器地址
 ```javascript
