@@ -50,6 +50,11 @@
   "closeDesiger": false, // 是否关闭magix-desiger插件，默认为false
   "closeInspector": false, // 是否关闭magix-inspector插件，默认为false
   "snowpackModulesDest": "src/dmp-new/web_modeuls", // dependencies 依赖的 npm 包在mm sync时同步到项目中的目录地址（默认值：src/[yourProjectName]/web_modules）
+  "crossConfigs": [{ // 跨项目配置 crossConfigs，仅在本地开发时注入该配置
+    "projectName": "",
+    "apiHost": "",
+    "source": ""
+  }], //
 
   //RAP相关配置
   "rapVersion": "2", //指定使用rap1/rap2

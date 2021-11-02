@@ -1,4 +1,4 @@
-### chrome插件： magix-cross-configs 
+### ~~chrome插件： magix-cross-configs [已作废]~~ 
 本插件主要用来在预发或测试环境配置跨项目加载的子项目的前端资源地址和接口host配置.
 
 * 插件下载地址：http://gitlab.alibaba-inc.com/thx/magix-cross-configs/raw/master/magix-cross-configs.crx

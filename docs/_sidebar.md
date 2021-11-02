@@ -14,6 +14,7 @@
   * [接入 clue](clue)
   * [Magix Desiger Tool](desiger)
   * [接入 rapper](rapper)
+  * [可视化配置 crossConfigs](visualCrossConfigs)
   * [跨项目加载 view 配置插件](magixCrossConfigs)
   * [一键清除 chrome 的 dsn 及 hsts 缓存](clearDnsHsts)
   * [生成本地自签名的 https 证书](https)
