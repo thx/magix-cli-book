@@ -75,7 +75,7 @@
     "252254|奇贤"
   ],
   "preloadModuleList": true, // 是否开启发布时自动生成预加载模块清单
-  "esBuildTarget": ["es2018"], // esbuild 的 target 配置
+  "esBuildTarget": ["es2018"], // esbuild 的 target 配置，如果要兼容老的 IE 版本之类，请设为 es5
 
   //埋点数据相关配置
   "logkey": "m5", //黄金令箭的logkey，固定的值
