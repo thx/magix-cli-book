@@ -75,7 +75,9 @@
     "252254|奇贤"
   ],
   "preloadModuleList": true, // 是否开启发布时自动生成预加载模块清单
+  "transpiler": "esbuild", // 指定 magix-combine 构建时使用的编译器，可选值 " esbuild | typescript " ，默认值 "typescript"
   "esBuildTarget": ["es2018"], // esbuild 的 target 配置，如果要兼容老的 IE 版本之类，请设为 es5，同时需要设置 magixJsTranspile: "es3"
+  "unstable_performanceOptimization": true, // 开启则使用 clean-css 替换 css-nano 进行样式构建
 
   //埋点数据相关配置
   "logkey": "m5", //黄金令箭的logkey，固定的值
