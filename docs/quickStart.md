@@ -48,6 +48,7 @@ mm init magix
 一种更方便的修改项目配置的方式是 `mm dev` 启动开发服务后，通过页面上注入的 `Magix 开发帮助` 浮层进行配置管理
 
 <img width="650" style="box-shadow: 0 0 10px rgba(0,0,0,0.2)" src="https://img.alicdn.com/imgextra/i4/O1CN01US01CI1tZZp5qMFw9_!!6000000005916-2-tps-1462-1670.png">
+
 保存配置后需要重启 `mm dev` 服务
 
 
