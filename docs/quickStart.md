@@ -48,10 +48,11 @@ mm init magix
 一种更方便的修改项目配置的方式是 `mm dev` 启动开发服务后，通过页面上注入的 `Magix 开发帮助` 浮层进行配置管理
 
 <img width="650" style="box-shadow: 0 0 10px rgba(0,0,0,0.2)" src="https://img.alicdn.com/imgextra/i4/O1CN01US01CI1tZZp5qMFw9_!!6000000005916-2-tps-1462-1670.png">
+保存配置后需要重启 `mm dev` 服务
 
 
 #### HMR 热更新
-项目默认开启 Magix 的 view 级别的模块热更新，如果你改的文件对应的 view 有在当前页面上渲染，则会触发 view 的热更新，否则全页刷新 
+项目默认开启 Magix 的 view 级别的模块热更新，修改代码，对应的 view 可立即更新，无需全页刷新
 
 #### 构建部署相关
 开发时请先执行 `mm createDaily` (短命令 `mm cd`，该命令是个插件，首次执行会提示安装) 创建带时间戳的日常分支，然后在日常分支上开发调试完毕，执行 `mm daily` 即可一键构建部署到预发环境，最后执行 `mm publish` 发布到生产环境
