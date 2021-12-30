@@ -12,7 +12,7 @@
     "日常": "11.163.168.1|http://daily-dmp.taobao.net"
   }, 
   "timeout": 10000, //设置本地服务的请求响应时间，单位ms
-  "autoOpenUrl": "http://localhost", //设置 mm dev后自动打开的页面地址，如果ipConfig里配置了域名，则以ipConfig里为准
+  "autoOpenUrl": "http://localhost:8080/index.html", //设置 mm dev 后自动打开的页面地址，url 里的端口号会作为服务器的端口号
   "apiMatch": [ //设置对接RAP或反向代理的接口的规则
       "api/",
       ".json",
@@ -100,10 +100,17 @@
   //mm gallery相关配置
   "galleries": [{
     "name": "magix-gallery@1.3.10", //组件库名称，可以@指定组件库版本
-    "path": "src/app/gallery" //组件同步到项目中的路径
+    "importTo": "src/app/gallery", //组件同步到项目中的路径
+    "importFrom": "src/magix5-gallery/gallery", // 指定组件库自身要拷贝的文件夹目录，同一个组件库可以多次同步不同目录下的文件 (不配置则默认为 tmpl) 
+    "single": false, // 标识组件库是否单组件模式  
   }],
   "galleriesMxRoot": "app/gallery", //本地通用组件的路径
   "galleriesLgRoot": "app/gallery-locl", //本地组件的路径
+
+  // 作为组件库的配置
+  "galleryExport": "src/magix5-gallery/gallery", // 标识当前组件库默认要同步到项目中的目标组件文件夹
+  "galleryIsSingle": false, // 是否单组件模式，如 common-code 需要配置成 true,默认为false
+  "galleryNpmClient": "tnpm" // 默认发布到 npm 源，如果是内网 @ali/xxx 包，需要配置成 tnpm
 
   //周边相关项目id
   "defId": "2233", //DEF云构建的项目id, mm init会自动创建，无需填写
