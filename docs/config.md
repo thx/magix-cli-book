@@ -1,16 +1,16 @@
-
-
 #### Magix 套件配置说明
+
 项目根目录下 package.json 的 `magixCliConfig` 对象为 Magix 套件的配置，以下是全量配置说明:
+
 ```javascript
 "magixCliConfig": {
   //项目开发相关
   "matPort": "8888", //本地起的开发服务器的端口
   "ipConfig": { //mm dev -d 时提供可选的反向代理ip列表，|符号之后的为ip对应的域名配置，有域名配置的话系统会自动配置host，并清除hsts及dns缓存。
     "预发": "140.205.215.168|https://pre-dmp.taobao.com",
-    "线上": "106.11.211.220|https://dmp.taobao.com", 
+    "线上": "106.11.211.220|https://dmp.taobao.com",
     "日常": "11.163.168.1|http://daily-dmp.taobao.net"
-  }, 
+  },
   "timeout": 10000, //设置本地服务的请求响应时间，单位ms
   "autoOpenUrl": "http://localhost:8080/index.html", //设置 mm dev 后自动打开的页面地址，url 里的端口号会作为服务器的端口号
   "apiMatch": [ //设置对接RAP或反向代理的接口的规则
@@ -59,6 +59,11 @@
   //RAP相关配置
   "rapVersion": "2", //指定使用rap1/rap2
   "rapProjectId": "878", //项目rap的projectId，mm init会自动创建，无需填写
+  // "跨域接口RAP仓库配置,projectName为crossConfigs里定义的项目名称，rapProjectId为跨域接口的RAP仓库id"
+  "crossRapProjects": [{ 
+    "projectName": "appone",
+    "rapProjectId": "1234"
+  }],
   "disableRap": true, //禁掉命令里rap相关的功能
   "modelsPath": "src/app/services/models.js", //mm models生成的本地models.js的文件路径
   "modelsTmpl": "./magix-cli-models-tmpl/models.js", //mm models生成的models.js的文件模板
@@ -101,8 +106,8 @@
   "galleries": [{
     "name": "magix-gallery@1.3.10", //组件库名称，可以@指定组件库版本
     "importTo": "src/app/gallery", //组件同步到项目中的路径
-    "importFrom": "src/magix5-gallery/gallery", // 指定组件库自身要拷贝的文件夹目录，同一个组件库可以多次同步不同目录下的文件 (不配置则默认为 tmpl) 
-    "single": false, // 标识组件库是否单组件模式  
+    "importFrom": "src/magix5-gallery/gallery", // 指定组件库自身要拷贝的文件夹目录，同一个组件库可以多次同步不同目录下的文件 (不配置则默认为 tmpl)
+    "single": false, // 标识组件库是否单组件模式
   }],
   "galleriesMxRoot": "app/gallery", //本地通用组件的路径
   "galleriesLgRoot": "app/gallery-locl", //本地组件的路径
