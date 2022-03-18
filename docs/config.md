@@ -83,6 +83,9 @@
   "transpiler": "esbuild", // 指定 magix-combine 构建时使用的编译器，可选值 " esbuild | typescript " ，默认值 "typescript"
   "esBuildTarget": ["es2018"], // esbuild 的 target 配置，如果要兼容老的 IE 版本之类，请设为 es5，同时需要设置 magixJsTranspile: "es3"
   "unstable_performanceOptimization": true, // 开启则使用 clean-css 替换 css-nano 进行样式构建
+  "cdnVersion": "20220317.181239.164", // mm publish发布完成后自动写入的最新版本号，用于下次发布时检测使用
+  "closeCheckVersion": false, // 是否关闭检测BP线上前端版本与DEF最新发布版本是否一致
+  
 
   //埋点数据相关配置
   "logkey": "m5", //黄金令箭的logkey，固定的值
