@@ -40,22 +40,23 @@ mm init magix
 }
 ```
   > **此处配置的完整 url 地址隐含多重配置信息**
-  1. `https` 协议部分代表当前启动的本地开发服务是 https 或 http （首次启动 https 服务需要安装本地证书，请执行 `mm cert --install` 安装）
-  2. `pre-zuanshi.taobao.com` 域名部分会自动将 *127.0.0.1 [域名]* 写入系统 hosts，无须手动管理 hosts (该配置会在中止 mm dev 时自动从 系统hosts 里移除)
-  3. `:443` 端口部分代表当前启动的本地服务器的端口号
-  4. `/index.html` 该部分代表入口 html 文件
+  1. `140.205.215.168` 部分是指接口转发的真实 IP 地址（一般由后端提供）
+  2. `https` 协议部分代表当前启动的本地开发服务是 https 或 http （首次启动 https 服务需要安装本地证书，请执行 `mm cert --install` 安装）
+  3. `pre-zuanshi.taobao.com` 配置的是自动打开的域名地址（内部会自动将 *127.0.0.1 [域名]* 写入系统 hosts，无须手动配置 hosts，同时该配置会在中止 mm dev 命令时自动从系统 hosts 里移除）
+  4. `:443` 端口部分代表当前启动的本地服务器的端口号
+  5. `/index.html` 该部分代表入口 html 文件
 
 一种更方便的修改项目配置的方式是 `mm dev` 启动开发服务后，通过页面上注入的 `Magix 开发帮助` 浮层进行配置管理
 
 <img width="650" style="box-shadow: 0 0 10px rgba(0,0,0,0.2)" src="https://img.alicdn.com/imgextra/i4/O1CN01US01CI1tZZp5qMFw9_!!6000000005916-2-tps-1462-1670.png">
 
-保存配置后需要重启 `mm dev` 服务
+保存配置后需要重新启动 `mm dev` 以使配置生效
 
 
 #### HMR 热更新
-项目默认开启 Magix 的 view 级别的模块热更新，修改代码，对应的 view 可立即更新，无需全页刷新
+项目默认开启 Magix 的 view 级别的模块热更新，修改代码，对应的 view 可自动立即更新，无需全页刷新
 
 #### 构建部署相关
-开发时请先执行 `mm createDaily` (短命令 `mm cd`，该命令是个插件，首次执行会提示安装) 创建带时间戳的日常分支，然后在日常分支上开发调试完毕，执行 `mm daily` 即可一键构建部署到预发环境，最后执行 `mm publish` 发布到生产环境
+开发时请先执行 `mm createDaily`（短命令 `mm cd`，该命令是个插件，首次执行会提示安装）创建带时间戳的日常分支，然后在日常分支上开发调试完毕后，执行 `mm daily` 即可一键构建部署到预发环境，最后执行 `mm publish` 发布到生产环境
 
 > `mm daily` 可以重复发布日常分支以方便测试验证，`mm publish` 发布后该分支会被删除
